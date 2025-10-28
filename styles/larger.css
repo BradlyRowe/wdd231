@@ -1,0 +1,339 @@
+/* Large Screen Styles */
+
+@media (min-width: 768px) {
+    /* Header for larger screens */
+    .header-content {
+        padding: 1.5rem 2rem;
+    }
+    
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .site-name {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    /* Navigation for larger screens */
+    .navigation {
+        max-height: none;
+        background-color: transparent;
+        border-top: none;
+        overflow: visible;
+    }
+    
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        margin: 0 2rem;
+    }
+    
+    .navigation li {
+        border-bottom: none;
+        margin: 0 0.5rem;
+    }
+    
+    .navigation a {
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        transition: all 0.3s ease;
+    }
+    
+    .navigation a:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    /* Main content adjustments */
+    main {
+        padding: 3rem 2rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    section {
+        padding: 2.5rem;
+        margin-bottom: 4rem;
+    }
+    
+    /* Learning Activities Grid */
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .activity-card {
+        padding: 2rem;
+    }
+    
+    /* Information Section Layout */
+    .info-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .weather-card {
+        flex: 0 0 300px;
+        padding: 2rem;
+    }
+    
+    .info-text {
+        flex: 1;
+    }
+    
+    /* Course Grid */
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .course-card {
+        padding: 2rem;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 3rem 2rem;
+    }
+    
+    .social-links {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-links svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Even larger screens */
+    .header-content {
+        padding: 2rem;
+    }
+    
+    .site-name {
+        font-size: 2.25rem;
+    }
+    
+    main {
+        padding: 4rem 2rem;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    /* Three column layout for activities */
+    .activity-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .activity-card {
+        padding: 2.5rem;
+    }
+    
+    /* Three column layout for courses */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .course-card {
+        padding: 2.5rem;
+    }
+    
+    /* Information section improvements */
+    .weather-card {
+        flex: 0 0 350px;
+        padding: 2.5rem;
+    }
+    
+    .info-text {
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+    
+    /* Section spacing */
+    section {
+        padding: 3rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Maximum width layouts */
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .navigation ul {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    /* Four column layout for large screens */
+    .activity-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    /* Maintain three columns for courses but with better spacing */
+    .course-grid {
+        gap: 2.5rem;
+    }
+    
+    /* Enhanced hover effects for larger screens */
+    .activity-card:hover,
+    .course-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navigation a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px -5px rgba(37, 99, 235, 0.3);
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .hamburger,
+    .navigation,
+    .social-links {
+        display: none !important;
+    }
+    
+    header {
+        border-bottom: 2px solid black;
+        position: static;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+    
+    .course-card,
+    .activity-card {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .course-grid,
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .activity-card:hover,
+    .course-card:hover,
+    .navigation a:hover {
+        transform: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000080;
+        --text-color: #000000;
+        --background-color: #ffffff;
+        --border-color: #000000;
+        --card-background: #f5f5f5;
+    }
+    
+    .course-card,
+    .activity-card {
+        border: 2px solid #000000;
+    }
+    
+    .filter-btn {
+        border: 2px solid #000000;
+    }
+}
+
+/* Dark Mode Support (if system preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #60a5fa;
+        --secondary-color: #3b82f6;
+        --accent-color: #93c5fd;
+        --text-color: #f9fafb;
+        --text-light: #d1d5db;
+        --background-color: #111827;
+        --card-background: #1f2937;
+        --border-color: #374151;
+        --success-color: #34d399;
+    }
+    
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    
+    .course-card.completed {
+        background-color: #064e3b;
+        border-color: var(--success-color);
+    }
+    
+    .hamburger span {
+        background-color: var(--primary-color);
+    }
+}

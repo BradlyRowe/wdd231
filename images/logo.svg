@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="50" cy="50" r="45" stroke="#2563eb" stroke-width="3" fill="none"/>
+  
+  <!-- Inner design elements -->
+  <circle cx="50" cy="50" r="35" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.5"/>
+  <circle cx="50" cy="50" r="25" stroke="#60a5fa" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Text elements -->
+  <text x="50" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">WDD</text>
+  <text x="50" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2563eb">231</text>
+  <text x="50" y="70" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#2563eb">Frontend</text>
+  
+  <!-- Decorative elements -->
+  <path d="M 20 50 Q 35 35 50 50 Q 65 65 80 50" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 20 50 Q 35 65 50 50 Q 65 35 80 50" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.4"/>
+</svg>

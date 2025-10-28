@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bradly Rowe - WDD 231 - Web Frontend Development</title>
-    <meta name="description" content="WDD 231 - Web Frontend Development course assignment portal for Bradly Rowe">
+    <title>Chamber of Commerce - WDD 231 - Bradly Rowe</title>
+    <meta name="description" content="Chamber of Commerce project for WDD 231 course">
     <meta name="author" content="Bradly Rowe">
     
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <!-- CSS Files (note the ../ for going up one directory) -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- JavaScript Files -->
-    <script src="scripts/includes.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
+    <!-- JavaScript Files (note the ../ for going up one directory) -->
+    <script src="../scripts/includes.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
 </head>
 <body>
     <!-- Header will be loaded dynamically -->
@@ -29,7 +28,7 @@
         <!-- Fallback content while loading -->
         <header>
             <div class="header-content">
-                <img src="images/logo.svg" alt="WDD 231 Logo" class="logo">
+                <img src="../images/logo.svg" alt="WDD 231 Logo" class="logo">
                 <span class="site-name">Bradly Rowe</span>
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                     <span></span>
@@ -40,83 +39,38 @@
         </header>
         <nav id="navigation" class="navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="chamber/index.html">Chamber</a></li>
-                <li><a href="final/index.html">Final</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html" class="active">Chamber</a></li>
+                <li><a href="../final/index.html">Final</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <h1>Home</h1>
+        <h1>Chamber of Commerce</h1>
         
-        <section class="learning-activities">
-            <h2>Learning Activities</h2>
-            <div class="activity-grid">
-                <div class="activity-card">
-                    <h3>Week 1</h3>
-                    <p>Course Home Page Setup</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 2</h3>
-                    <p>Chamber of Commerce Site</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 3</h3>
-                    <p>Advanced CSS & Layouts</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 4</h3>
-                    <p>JavaScript APIs</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 5</h3>
-                    <p>Performance Optimization</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 6</h3>
-                    <p>Final Project</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-            </div>
+        <section class="chamber-intro">
+            <h2>Project Overview</h2>
+            <p>This page will contain the Chamber of Commerce project for Week 2 of the WDD 231 course.</p>
+            <p>The project will focus on creating a responsive business website with advanced CSS layouts and JavaScript functionality.</p>
         </section>
 
-        <section class="information">
-            <h2>Information</h2>
-            <div class="info-content">
-                <div class="weather-card">
-                    <h3>Weather</h3>
-                    <div class="weather-info">
-                        <p>Current Temperature: <span id="temperature">Loading...</span></p>
-                        <p>Conditions: <span id="conditions">Loading...</span></p>
-                        <p>Location: Idaho Falls, ID</p>
-                    </div>
-                </div>
-                <div class="info-text">
-                    <p>Welcome to my WDD 231 course portal! This site showcases my learning journey in frontend web development, including projects on responsive design, accessibility, and modern web development practices.</p>
-                    <p>Throughout this course, I'm building skills in advanced HTML, CSS, JavaScript, and web performance optimization.</p>
-                </div>
-            </div>
+        <section class="project-features">
+            <h2>Planned Features</h2>
+            <ul>
+                <li>Responsive design for all device sizes</li>
+                <li>Business directory functionality</li>
+                <li>Event calendar integration</li>
+                <li>Member showcase</li>
+                <li>Contact forms with validation</li>
+                <li>Local weather integration</li>
+            </ul>
         </section>
 
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="course-filters">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="CSE">CSE Courses</button>
-                <button class="filter-btn" data-filter="WDD">WDD Courses</button>
-            </div>
-            <div class="credits-display">
-                <p>Total Credits: <span id="total-credits">0</span></p>
-            </div>
-            <div id="course-container" class="course-grid">
-                <!-- Courses will be dynamically inserted here -->
-            </div>
+        <section class="development-status">
+            <h2>Development Status</h2>
+            <p><strong>Status:</strong> Coming Soon - Week 2 Assignment</p>
+            <p><strong>Expected Completion:</strong> Week 2 of Course</p>
         </section>
     </main>
 
