@@ -1,0 +1,304 @@
+# WDD 231 - Web Frontend Development I
+# Git Ignore File for GitHub Repository
+
+# Operating System Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE and Editor Files
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+bin/
+obj/
+*.cache
+*.dll
+*.exe
+*.pdb
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Development Files
+# Node.js (if using build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.eslintcache
+.stylelintcache
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+
+# CSS Preprocessors
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.#*
+\#*#
+.*.swp
+.*.swo
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files (usually shouldn't be in repo)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Image optimization temp files
+*.tmp.jpg
+*.tmp.png
+*.tmp.gif
+*.tmp.svg
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Server files
+server.log
+access.log
+error.log
+
+# Test coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Lighthouse reports (if generated)
+lighthouse-report.html
+lighthouse-report.json
+
+# Local development files
+local/
+private/
+.local/
+
+# Miscellaneous
+*.orig
+*.patch
+*.diff
+*.reject
+
+# Project specific ignores
+# Uncomment if you use these:
+# optimized-images/
+# compressed/
+# minified/
+
+# Documentation files
+# Generated documentation
+docs/_build/
+site/
+*.md~
+*.markdown~
+
+# Temporary documentation files
+README.tmp
+NOTES.md
+TODO.md
+TEMP.md
+DRAFT.md
+.notes/
+notes/
+
+# Project specific documentation (temporary)
+COMPONENTS_README.md
+
+# Documentation build files (if using generators)
+docs/_build/
+site/
+
+# Python (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Web server logs
+access.log
+error.log
+*.log
+
+# Lock files for package managers
+composer.lock
+Gemfile.lock
+
+# Local configuration files
+config.local.js
+config.local.json
+
+# Performance monitoring files
+.clinic/
+profile-*
+
+# ESLint cache
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
