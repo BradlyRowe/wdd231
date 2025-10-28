@@ -290,7 +290,7 @@
 }
 
 /* High Contrast Mode Support */
-@media (prefers-contrast: high) {
+@media (prefers-contrast: more) {
     body {
         color: #000000;
         background-color: #ffffff;
