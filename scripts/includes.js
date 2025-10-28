@@ -40,7 +40,11 @@ class IncludeLoader {
      */
     async loadHeader(targetSelector = 'header-placeholder', basePath = '') {
         try {
-            const headerHTML = await this.loadHTML(`${basePath}includes/header.html`);
+            let headerHTML = await this.loadHTML(`${basePath}includes/header.html`);
+            
+            // Update relative paths in the header content
+            headerHTML = this.updateRelativePaths(headerHTML, basePath);
+            
             const targetElement = document.getElementById(targetSelector) || document.querySelector(`[data-include="header"]`);
             
             if (targetElement) {
@@ -66,7 +70,11 @@ class IncludeLoader {
      */
     async loadFooter(targetSelector = 'footer-placeholder', basePath = '') {
         try {
-            const footerHTML = await this.loadHTML(`${basePath}includes/footer.html`);
+            let footerHTML = await this.loadHTML(`${basePath}includes/footer.html`);
+            
+            // Update relative paths in the footer content
+            footerHTML = this.updateRelativePaths(footerHTML, basePath);
+            
             const targetElement = document.getElementById(targetSelector) || document.querySelector(`[data-include="footer"]`);
             
             if (targetElement) {

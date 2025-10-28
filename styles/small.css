@@ -1,21 +1,12 @@
 /* Small Screen Styles (Mobile First) */
 
-/* CSS Variables */
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    --text-color: #1f2937;
-    --text-light: #6b7280;
-    --background-color: #ffffff;
-    --card-background: #f9fafb;
-    --border-color: #e5e7eb;
-    --success-color: #10b981;
-    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
+/* Color Palette and Values (converted from CSS variables for W3C validation)
+   Primary: #2563eb, Secondary: #1e40af, Accent: #3b82f6
+   Text: #1f2937, Text Light: #6b7280, Background: #ffffff
+   Card Background: #f9fafb, Border: #e5e7eb, Success: #10b981
+   Shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), Shadow MD: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+   Border Radius: 8px, Font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+*/
 
 /* Base Styles */
 * {
@@ -25,16 +16,16 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: #1f2937;
+    background-color: #ffffff;
 }
 
 /* Header Styles */
 header {
-    background-color: var(--background-color);
-    box-shadow: var(--shadow);
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -57,7 +48,7 @@ header {
 .site-name {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #2563eb;
     flex-grow: 1;
     margin-left: 1rem;
 }
@@ -78,7 +69,7 @@ header {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: #2563eb;
     transition: 0.3s ease;
     border-radius: 2px;
 }
@@ -97,8 +88,8 @@ header {
 
 /* Navigation Styles */
 .navigation {
-    background-color: var(--card-background);
-    border-top: 1px solid var(--border-color);
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -115,7 +106,7 @@ header {
 }
 
 .navigation li {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .navigation li:last-child {
@@ -126,14 +117,14 @@ header {
     display: block;
     padding: 1rem;
     text-decoration: none;
-    color: var(--text-color);
+    color: #1f2937;
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: var(--primary-color);
+    background-color: #2563eb;
     color: white;
 }
 
@@ -147,7 +138,7 @@ main {
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #2563eb;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -155,26 +146,26 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: #1f2937;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid #2563eb;
     padding-bottom: 0.5rem;
 }
 
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: #1f2937;
     margin-bottom: 0.5rem;
 }
 
 /* Section Styles */
 section {
     margin-bottom: 3rem;
-    background-color: var(--card-background);
+    background-color: #f9fafb;
     padding: 2rem 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Learning Activities Grid */
@@ -185,32 +176,32 @@ section {
 }
 
 .activity-card {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2563eb;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .activity-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .activity-card h3 {
-    color: var(--primary-color);
+    color: #2563eb;
     margin-bottom: 0.5rem;
 }
 
 .activity-card p {
-    color: var(--text-light);
+    color: #6b7280;
     margin-bottom: 1rem;
 }
 
 .activity-link {
     display: inline-block;
-    color: var(--primary-color);
+    color: #2563eb;
     text-decoration: none;
     font-weight: 500;
     border-bottom: 2px solid transparent;
@@ -218,7 +209,7 @@ section {
 }
 
 .activity-link:hover {
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: #2563eb;
 }
 
 /* Information Section */
@@ -229,10 +220,10 @@ section {
 }
 
 .weather-card {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .weather-info p {
@@ -241,7 +232,7 @@ section {
 
 .weather-info span {
     font-weight: 600;
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
 .info-text p {
@@ -259,10 +250,10 @@ section {
 
 .filter-btn {
     padding: 0.75rem 1.5rem;
-    border: 2px solid var(--primary-color);
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    border-radius: var(--border-radius);
+    border: 2px solid #2563eb;
+    background-color: #ffffff;
+    color: #2563eb;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -270,7 +261,7 @@ section {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background-color: var(--primary-color);
+    background-color: #2563eb;
     color: white;
 }
 
@@ -282,11 +273,11 @@ section {
 .credits-display p {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: #1f2937;
 }
 
 #total-credits {
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
 .course-grid {
@@ -296,21 +287,21 @@ section {
 }
 
 .course-card {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5e7eb;
     transition: all 0.3s ease;
 }
 
 .course-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .course-card.completed {
-    border-color: var(--success-color);
+    border-color: #10b981;
     background-color: #f0fdf4;
 }
 
@@ -328,25 +319,25 @@ section {
 .course-code {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--primary-color);
-    background-color: var(--card-background);
+    color: #2563eb;
+    background-color: #f9fafb;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
 }
 
 .course-card.completed .course-code {
-    background-color: var(--success-color);
+    background-color: #10b981;
     color: white;
 }
 
 .course-credits {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: #6b7280;
     margin-top: 0.25rem;
 }
 
 .course-description {
-    color: var(--text-light);
+    color: #6b7280;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -358,8 +349,8 @@ section {
 }
 
 .tech-tag {
-    background-color: var(--card-background);
-    color: var(--text-color);
+    background-color: #f9fafb;
+    color: #1f2937;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -367,13 +358,13 @@ section {
 }
 
 .course-card.completed .tech-tag {
-    background-color: var(--success-color);
+    background-color: #10b981;
     color: white;
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--text-color);
+    background-color: #1f2937;
     color: white;
     padding: 2rem 1rem;
     margin-top: 3rem;
@@ -403,7 +394,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    color: #3b82f6;
 }
 
 .social-links svg {
@@ -437,7 +428,7 @@ footer {
 /* Focus Styles for Accessibility */
 button:focus,
 a:focus {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid #2563eb;
     outline-offset: 2px;
 }
 
