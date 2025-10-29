@@ -61,40 +61,31 @@
         padding: 3rem 2rem;
     }
     
-    h1 {
-        font-size: 3.5rem;
-        margin-bottom: 3rem;
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        align-items: start;
     }
     
-    section {
+    .profile-card {
         padding: 2.5rem;
-        margin-bottom: 4rem;
+        position: sticky;
+        top: 2rem;
     }
     
-    /* Learning Activities Grid */
-    .activity-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    .profile-image {
+        width: 200px;
+        height: 200px;
     }
     
-    .activity-card {
-        padding: 2rem;
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
     
-    /* Information Section Layout */
-    .info-content {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-    
-    .weather-card {
-        flex: 0 0 300px;
-        padding: 2rem;
-    }
-    
-    .info-text {
-        flex: 1;
+    .courses-section {
+        padding: 2.5rem;
     }
     
     /* Course Grid */
@@ -143,23 +134,12 @@
     }
     
     h1 {
-        font-size: 4rem;
-        margin-bottom: 4rem;
+        font-size: 3rem;
     }
     
-    /* Three column layout for activities */
-    .activity-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-    
-    .activity-card {
-        padding: 2.5rem;
-    }
-    
-    /* Three column layout for courses */
+    /* Course Grid - 2 columns in courses section */
     .course-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
     
@@ -167,21 +147,12 @@
         padding: 2.5rem;
     }
     
-    /* Information section improvements */
-    .weather-card {
-        flex: 0 0 350px;
-        padding: 2.5rem;
-    }
-    
-    .info-text {
-        font-size: 1.125rem;
-        line-height: 1.8;
-    }
-    
-    /* Section spacing */
-    section {
+    .profile-card {
         padding: 3rem;
-        margin-bottom: 5rem;
+    }
+    
+    .courses-section {
+        padding: 3rem;
     }
 }
 
@@ -198,22 +169,15 @@
     }
     
     h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
     
-    /* Four column layout for large screens */
-    .activity-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2.5rem;
-    }
-    
-    /* Maintain three columns for courses but with better spacing */
+    /* Better spacing for large screens */
     .course-grid {
         gap: 2.5rem;
     }
     
     /* Enhanced hover effects for larger screens */
-    .activity-card:hover,
     .course-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);

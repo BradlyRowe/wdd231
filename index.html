@@ -47,76 +47,41 @@
     </div>
 
     <main>
-        <h1>Home</h1>
-        
-        <section class="learning-activities">
-            <h2>Learning Activities</h2>
-            <div class="activity-grid">
-                <div class="activity-card">
-                    <h3>Week 1</h3>
-                    <p>Course Home Page Setup</p>
-                    <a href="#" class="activity-link">View Activity</a>
+        <div class="main-container">
+            <!-- Profile Section (Left Column on Desktop) -->
+            <section class="profile-section">
+                <div class="profile-card">
+                    <img src="images/profile.svg" alt="Bradly Rowe Profile Picture" class="profile-image">
+                    <h1>Bradly Rowe</h1>
+                    <p class="profile-location">Utah, USA</p>
+                    <p class="profile-description">
+                        I am a web development student passionate about creating accessible, 
+                        responsive websites. Currently pursuing the Web and Computer Programming 
+                        certificate to enhance my frontend development skills.
+                    </p>
                 </div>
-                <div class="activity-card">
-                    <h3>Week 2</h3>
-                    <p>Chamber of Commerce Site</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 3</h3>
-                    <p>Advanced CSS & Layouts</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 4</h3>
-                    <p>JavaScript APIs</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 5</h3>
-                    <p>Performance Optimization</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-                <div class="activity-card">
-                    <h3>Week 6</h3>
-                    <p>Final Project</p>
-                    <a href="#" class="activity-link">View Activity</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="information">
-            <h2>Information</h2>
-            <div class="info-content">
-                <div class="weather-card">
-                    <h3>Weather</h3>
-                    <div class="weather-info">
-                        <p>Current Temperature: <span id="temperature">Loading...</span></p>
-                        <p>Conditions: <span id="conditions">Loading...</span></p>
-                        <p>Location: Idaho Falls, ID</p>
-                    </div>
+            <!-- Courses Section (Right Column on Desktop) -->
+            <section class="courses-section">
+                <h2>Web and Computer Programming Certificate</h2>
+                
+                <div class="course-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="CSE">CSE</button>
+                    <button class="filter-btn" data-filter="WDD">WDD</button>
                 </div>
-                <div class="info-text">
-                    <p>Welcome to my WDD 231 course portal! This site showcases my learning journey in frontend web development, including projects on responsive design, accessibility, and modern web development practices.</p>
-                    <p>Throughout this course, I'm building skills in advanced HTML, CSS, JavaScript, and web performance optimization.</p>
+                
+                <div class="credits-display">
+                    <p>Credits Required: <span id="total-credits">0</span></p>
                 </div>
-            </div>
-        </section>
-
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="course-filters">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="CSE">CSE Courses</button>
-                <button class="filter-btn" data-filter="WDD">WDD Courses</button>
-            </div>
-            <div class="credits-display">
-                <p>Total Credits: <span id="total-credits">0</span></p>
-            </div>
-            <div id="course-container" class="course-grid">
-                <!-- Courses will be dynamically inserted here -->
-            </div>
-        </section>
+                
+                <div id="course-container" class="course-grid">
+                    <!-- Courses will be dynamically inserted here -->
+                </div>
+            </section>
+        </div>
+    </main>
     </main>
 
     <!-- Footer will be loaded dynamically -->
