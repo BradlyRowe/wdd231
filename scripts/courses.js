@@ -90,22 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to create a course card HTML
     function createCourseCard(course) {
         const completedClass = course.completed ? 'completed' : '';
-        const techTags = course.technology.map(tech => 
-            `<span class="tech-tag">${tech}</span>`
-        ).join('');
 
         return `
             <div class="course-card ${completedClass}">
-                <div class="course-header">
-                    <div class="course-title">
-                        <h3>${course.title}</h3>
-                        <p class="course-credits">${course.credits} Credits</p>
-                    </div>
+                <div class="course-content">
                     <div class="course-code">${course.subject} ${course.number}</div>
-                </div>
-                <p class="course-description">${course.description}</p>
-                <div class="course-tech">
-                    ${techTags}
+                    <h3 class="course-title">${course.title}</h3>
                 </div>
             </div>
         `;

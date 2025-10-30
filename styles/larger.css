@@ -1,14 +1,14 @@
 /* Large Screen Styles */
 
 @media (min-width: 768px) {
-    /* Header for larger screens */
-    .header-content {
+    /* Main Header for larger screens */
+    .main-header-content {
         padding: 1.5rem 2rem;
     }
     
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
     }
     
     .site-name {
@@ -16,26 +16,28 @@
         margin-left: 1.5rem;
     }
     
-    .hamburger {
-        display: none;
-    }
-    
     /* Navigation for larger screens */
     .navigation {
         max-height: none;
-        background-color: transparent;
-        border-top: none;
+        background-color: #1f2937;
+        border-top: 1px solid #374151;
         overflow: visible;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     }
     
     .navigation ul {
         display: flex;
-        justify-content: center;
-        padding: 1rem 0;
-        background-color: #f9fafb;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        margin: 0 2rem;
+        justify-content: flex-start;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .navigation li {
@@ -47,6 +49,7 @@
         padding: 0.75rem 1.5rem;
         border-radius: 8px;
         transition: all 0.3s ease;
+        color: white;
     }
     
     .navigation a:hover {
@@ -58,20 +61,70 @@
     
     /* Main content adjustments */
     main {
-        padding: 3rem 2rem;
+        max-width: none;
+        padding: 3rem 0;
+        margin: 0;
+        width: 100%;
     }
     
     .main-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+        display: flex;
+        flex-direction: column;
         gap: 3rem;
-        align-items: start;
+        align-items: stretch;
+        max-width: none;
     }
     
-    .profile-card {
-        padding: 2.5rem;
+    .profile-section {
+        flex-direction: row;
+        gap: 5px;
+        align-items: stretch;
+    }
+    
+    .profile-content {
+        flex: 3;
+        text-align: left;
+        padding: 0 2rem 2.5rem 2rem;
         position: sticky;
         top: 2rem;
+    }
+    
+    .profile-content h2 {
+        text-align: center;
+        width: auto;
+        display: block;
+        border-radius: 8px 8px 0 0;
+        transition: all 0.3s ease;
+        margin: 0 -2rem 1rem -2rem;
+    }
+    
+    .profile-content h2:hover {
+        background-color: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile-image-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem 2.5rem 2rem;
+    }
+    
+    .profile-image-container h2 {
+        text-align: center;
+        width: calc(100% + 4rem);
+        display: block;
+        border-radius: 8px 8px 0 0;
+        transition: all 0.3s ease;
+        margin: 0 -2rem 1rem -2rem;
+    }
+    
+    .profile-image-container h2:hover {
+        background-color: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
     .profile-image {
@@ -84,18 +137,40 @@
         margin-bottom: 1rem;
     }
     
-    .courses-section {
-        padding: 2.5rem;
-    }
-    
     /* Course Grid */
     .course-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
     
     .course-card {
-        padding: 2rem;
+        padding: 0.75rem;
+    }
+    
+    /* Certificate Info Section adjustments */
+    .certificate-info-section {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .certificate-content {
+        padding: 0 2rem 2.5rem 2rem;
+    }
+    
+    .certificate-content h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        width: auto;
+        display: block;
+        border-radius: 8px 8px 0 0;
+        transition: all 0.3s ease;
+        margin: 0 -2rem 1rem -2rem;
+    }
+    
+    .certificate-content h2:hover {
+        background-color: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
     /* Footer adjustments */
@@ -121,7 +196,7 @@
 
 @media (min-width: 1024px) {
     /* Even larger screens */
-    .header-content {
+    .main-header-content {
         padding: 2rem;
     }
     
@@ -130,35 +205,43 @@
     }
     
     main {
-        padding: 4rem 2rem;
+        max-width: none;
+        padding: 4rem 0;
+        margin: 0;
+        width: 100%;
     }
     
     h1 {
         font-size: 3rem;
     }
     
-    /* Course Grid - 2 columns in courses section */
+    /* Course Grid - 3 columns in courses section */
     .course-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
     
     .course-card {
-        padding: 2.5rem;
+        padding: 0.75rem;
     }
     
-    .profile-card {
-        padding: 3rem;
+    .profile-content {
+        padding: 0 2rem 3rem 2rem;
     }
     
-    .courses-section {
-        padding: 3rem;
+    .profile-image-container {
+        padding: 0 2rem 3rem 2rem;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
     }
 }
 
 @media (min-width: 1200px) {
     /* Maximum width layouts */
-    .header-content {
+    .main-header-content {
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -166,6 +249,8 @@
     .navigation ul {
         margin: 0 auto;
         max-width: 1200px;
+        justify-content: flex-start;
+        padding-left: 2rem;
     }
     
     h1 {
@@ -197,13 +282,12 @@
         box-shadow: none !important;
     }
     
-    .hamburger,
     .navigation,
     .social-links {
         display: none !important;
     }
     
-    header {
+    .main-header {
         border-bottom: 2px solid black;
         position: static;
     }
@@ -285,9 +369,5 @@
     .course-card.completed {
         background-color: #064e3b;
         border-color: #34d399;
-    }
-    
-    .hamburger span {
-        background-color: #60a5fa;
     }
 }

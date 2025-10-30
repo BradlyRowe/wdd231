@@ -1,6 +1,7 @@
 // Date functionality for footer
 
-document.addEventListener('DOMContentLoaded', function() {
+// Function to update footer dates
+function updateFooterDates() {
     // Set current year in footer
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) {
@@ -14,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const lastModified = document.lastModified;
         lastModifiedElement.innerHTML = `Last updated: ${lastModified}`;
     }
+}
+
+// Run on DOM content loaded
+document.addEventListener('DOMContentLoaded', function() {
+    updateFooterDates();
     
     // Weather simulation (since we don't have a real API key)
     const temperatureElement = document.getElementById('temperature');
@@ -57,4 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const pastDaysOfYear = (date - firstDayOfYear) / 86400000;
         return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
     };
+});
+
+// Also run when footer is dynamically loaded
+document.addEventListener('footerLoaded', function() {
+    updateFooterDates();
 });
