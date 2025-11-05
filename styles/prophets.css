@@ -1,0 +1,247 @@
+/* Prophets Page Styling */
+/* WDD 231 - Latter-day Prophets Activity */
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+/* Main Content Container */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+/* Cards Container - CSS Grid with auto-fit */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Individual Prophet Card Styling */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Prophet Name Styling */
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+    position: relative;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Information Paragraphs */
+section p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #5a6c7d;
+    text-align: left;
+    background: rgba(102, 126, 234, 0.05);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+}
+
+section p strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Prophet Portrait Styling */
+section img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    #cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.3rem;
+    }
+    
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    section {
+        margin: 0 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger animation delay for cards */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+section:nth-child(6) { animation-delay: 0.6s; }
+section:nth-child(7) { animation-delay: 0.7s; }
+section:nth-child(8) { animation-delay: 0.8s; }
+section:nth-child(9) { animation-delay: 0.9s; }
+section:nth-child(10) { animation-delay: 1.0s; }
+
+/* Ensure images maintain aspect ratio */
+section img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    section {
+        animation: none;
+    }
+    
+    section:hover {
+        transform: none;
+    }
+    
+    section img:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        background: #000;
+        color: #fff;
+    }
+    
+    section {
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+    }
+    
+    header {
+        background: #fff;
+        color: #000;
+        border-bottom: 3px solid #000;
+    }
+}
