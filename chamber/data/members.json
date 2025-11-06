@@ -1,0 +1,100 @@
+{
+  "members": [
+    {
+      "name": "Tech Innovators LLC",
+      "address": "456 Innovation Drive, Provo, UT 84604",
+      "phone": "(801) 555-0123",
+      "website": "https://techinnovators.com",
+      "image": "images/tech-innovators-logo.jpg",
+      "membershipLevel": 3,
+      "industry": "Technology",
+      "description": "Leading software development and IT consulting firm specializing in custom business solutions and cloud computing.",
+      "yearEstablished": 2015,
+      "employees": 45
+    },
+    {
+      "name": "Mountain View Restaurant",
+      "address": "789 Main Street, Orem, UT 84058",
+      "phone": "(801) 555-0456",
+      "website": "https://mountainviewrestaurant.com",
+      "image": "images/mountain-view-restaurant.jpg",
+      "membershipLevel": 2,
+      "industry": "Hospitality",
+      "description": "Family-owned restaurant serving authentic American cuisine with spectacular mountain views since 1998.",
+      "yearEstablished": 1998,
+      "employees": 25
+    },
+    {
+      "name": "Utah Valley Auto Repair",
+      "address": "321 Automotive Lane, Spanish Fork, UT 84660",
+      "phone": "(801) 555-0789",
+      "website": "https://utahvalleyauto.com",
+      "image": "images/utah-valley-auto.jpg",
+      "membershipLevel": 1,
+      "industry": "Automotive",
+      "description": "Trusted automotive repair and maintenance services with certified mechanics and state-of-the-art equipment.",
+      "yearEstablished": 2010,
+      "employees": 12
+    },
+    {
+      "name": "Green Valley Marketing",
+      "address": "654 Creative Blvd, Lehi, UT 84043",
+      "phone": "(801) 555-0321",
+      "website": "https://greenvalleymarketing.com",
+      "image": "images/green-valley-marketing.jpg",
+      "membershipLevel": 3,
+      "industry": "Marketing",
+      "description": "Full-service digital marketing agency helping local businesses grow through strategic online presence and advertising.",
+      "yearEstablished": 2018,
+      "employees": 18
+    },
+    {
+      "name": "Wasatch Medical Center",
+      "address": "987 Health Plaza, American Fork, UT 84003",
+      "phone": "(801) 555-0654",
+      "website": "https://wasatchmedical.com",
+      "image": "images/wasatch-medical.jpg",
+      "membershipLevel": 3,
+      "industry": "Healthcare",
+      "description": "Comprehensive healthcare facility offering primary care, specialty services, and emergency medical care to the community.",
+      "yearEstablished": 2005,
+      "employees": 150
+    },
+    {
+      "name": "Peak Performance Fitness",
+      "address": "147 Fitness Way, Pleasant Grove, UT 84062",
+      "phone": "(801) 555-0987",
+      "website": "https://peakperformancefitness.com",
+      "image": "images/peak-performance-fitness.jpg",
+      "membershipLevel": 2,
+      "industry": "Health & Fitness",
+      "description": "Modern fitness center offering personal training, group classes, and wellness programs for all fitness levels.",
+      "yearEstablished": 2020,
+      "employees": 8
+    },
+    {
+      "name": "Valley Construction Co.",
+      "address": "258 Builder Street, Springville, UT 84663",
+      "phone": "(801) 555-0147",
+      "website": "https://valleyconstruction.com",
+      "image": "images/valley-construction.jpg",
+      "membershipLevel": 2,
+      "industry": "Construction",
+      "description": "Licensed general contractor specializing in residential and commercial construction projects throughout Utah Valley.",
+      "yearEstablished": 2012,
+      "employees": 35
+    },
+    {
+      "name": "Artisan Coffee Roasters",
+      "address": "369 Brew Street, Provo, UT 84604",
+      "phone": "(801) 555-0258",
+      "website": "https://artisancoffee.com",
+      "image": "images/artisan-coffee.jpg",
+      "membershipLevel": 1,
+      "industry": "Food & Beverage",
+      "description": "Local coffee roastery and café serving freshly roasted, ethically sourced coffee beans and artisanal pastries.",
+      "yearEstablished": 2019,
+      "employees": 6
+    }
+  ]
+}
