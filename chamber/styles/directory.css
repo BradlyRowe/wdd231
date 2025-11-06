@@ -34,8 +34,10 @@ header {
 
 .logo { 
     width: 60px; height: 60px; background: var(--white); 
-    border-radius: 50%; padding: 8px; 
+    border-radius: 50%; padding: 8px; color: var(--dark);
 }
+
+.logo, .logo * { color: var(--dark) !important; }
 
 .site-name h1 { font: 700 1.5rem 'Merriweather', serif; }
 .site-name p { font-size: 0.875rem; opacity: 0.9; }
