@@ -42,6 +42,11 @@ body {
     background: var(--white);
 }
 
+/* Ensure proper contrast - no white text on white backgrounds */
+.logo * {
+    color: var(--text-dark) !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -101,6 +106,13 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 0.25rem;
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
 
 .hamburger span {
@@ -120,6 +132,7 @@ header {
 .navigation {
     background: var(--primary-navy);
     box-shadow: var(--shadow);
+    color: var(--white);
 }
 
 .navigation ul {
@@ -149,8 +162,10 @@ header {
 }
 
 .navigation a:hover,
+.navigation a:focus,
 .navigation a.active {
-    background: var(--white-10);
+    background: var(--primary-blue);
+    color: var(--white);
 }
 
 /* Main Content */
@@ -206,7 +221,8 @@ main {
     transition: all 0.2s;
 }
 
-.view-btn:hover {
+.view-btn:hover,
+.view-btn:focus {
     background: var(--blue-10);
 }
 
