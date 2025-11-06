@@ -2,7 +2,7 @@
   "members": [
     {
       "name": "Tech Innovators LLC",
-      "address": "456 Innovation Drive, Provo, UT 84604",
+      "address": "456 Innovation Drive, Roy, UT 84067",
       "phone": "(801) 555-0123",
       "website": "https://techinnovators.com",
       "image": "images/tech-innovators-logo.jpg",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Mountain View Restaurant",
-      "address": "789 Main Street, Orem, UT 84058",
+      "address": "789 Main Street, Roy, UT 84067",
       "phone": "(801) 555-0456",
       "website": "https://mountainviewrestaurant.com",
       "image": "images/mountain-view-restaurant.jpg",
@@ -25,8 +25,8 @@
       "employees": 25
     },
     {
-      "name": "Utah Valley Auto Repair",
-      "address": "321 Automotive Lane, Spanish Fork, UT 84660",
+      "name": "Roy City Auto Repair",
+      "address": "321 Automotive Lane, Roy, UT 84067",
       "phone": "(801) 555-0789",
       "website": "https://utahvalleyauto.com",
       "image": "images/utah-valley-auto.jpg",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Green Valley Marketing",
-      "address": "654 Creative Blvd, Lehi, UT 84043",
+      "address": "654 Creative Blvd, Roy, UT 84067",
       "phone": "(801) 555-0321",
       "website": "https://greenvalleymarketing.com",
       "image": "images/green-valley-marketing.jpg",
@@ -50,7 +50,7 @@
     },
     {
       "name": "Wasatch Medical Center",
-      "address": "987 Health Plaza, American Fork, UT 84003",
+      "address": "987 Health Plaza, Roy, UT 84067",
       "phone": "(801) 555-0654",
       "website": "https://wasatchmedical.com",
       "image": "images/wasatch-medical.jpg",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Peak Performance Fitness",
-      "address": "147 Fitness Way, Pleasant Grove, UT 84062",
+      "address": "147 Fitness Way, Roy, UT 84067",
       "phone": "(801) 555-0987",
       "website": "https://peakperformancefitness.com",
       "image": "images/peak-performance-fitness.jpg",
@@ -74,19 +74,19 @@
     },
     {
       "name": "Valley Construction Co.",
-      "address": "258 Builder Street, Springville, UT 84663",
+      "address": "258 Builder Street, Roy, UT 84067",
       "phone": "(801) 555-0147",
       "website": "https://valleyconstruction.com",
       "image": "images/valley-construction.jpg",
       "membershipLevel": 2,
       "industry": "Construction",
-      "description": "Licensed general contractor specializing in residential and commercial construction projects throughout Utah Valley.",
+      "description": "Licensed general contractor specializing in residential and commercial construction projects throughout Roy City.",
       "yearEstablished": 2012,
       "employees": 35
     },
     {
       "name": "Artisan Coffee Roasters",
-      "address": "369 Brew Street, Provo, UT 84604",
+      "address": "369 Brew Street, Roy, UT 84067",
       "phone": "(801) 555-0258",
       "website": "https://artisancoffee.com",
       "image": "images/artisan-coffee.jpg",

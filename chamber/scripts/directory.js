@@ -1,4 +1,4 @@
-// Utah Valley Chamber of Commerce - Directory JavaScript
+// Roy City Chamber of Commerce - Directory JavaScript
 // WDD 231 - Chamber Directory Functionality
 
 // Wait for DOM to be fully loaded
@@ -23,8 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // View toggle functionality
     if (gridViewBtn && listViewBtn) {
-        gridViewBtn.addEventListener('click', () => setView('grid'));
-        listViewBtn.addEventListener('click', () => setView('list'));
+        console.log('View buttons found, adding event listeners');
+        gridViewBtn.addEventListener('click', () => {
+            console.log('Grid view button clicked');
+            setView('grid');
+        });
+        listViewBtn.addEventListener('click', () => {
+            console.log('List view button clicked');
+            setView('list');
+        });
+    } else {
+        console.error('View buttons not found:', { gridViewBtn, listViewBtn });
     }
     
     // Fetch and display member data
@@ -36,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize page functionality
 function initializePage() {
-    console.log('Utah Valley Chamber Directory initialized');
+    console.log('Roy City Chamber Directory initialized');
 }
 
 // Fetch member data from JSON file
@@ -50,6 +59,9 @@ async function fetchMembers() {
         
         const data = await response.json();
         console.table(data.members); // Display data in console table format
+        
+        // Store member data globally for view switching
+        window.currentMemberData = data.members;
         
         displayMembers(data.members);
         
@@ -71,11 +83,17 @@ function displayMembers(members) {
     // Clear existing content
     container.innerHTML = '';
     
-    // Create member cards
-    members.forEach((member, index) => {
-        const memberCard = createMemberCard(member);
-        memberCard.style.animationDelay = `${index * 0.1}s`;
-        container.appendChild(memberCard);
+    // Sort members alphabetically by name
+    const sortedMembers = members.sort((a, b) => a.name.localeCompare(b.name));
+    
+    // Determine current view type
+    const isListView = container.classList.contains('members-list');
+    
+    // Create member elements based on view type
+    sortedMembers.forEach((member, index) => {
+        const memberElement = isListView ? createMemberListItem(member) : createMemberCard(member);
+        memberElement.style.animationDelay = `${index * 0.1}s`;
+        container.appendChild(memberElement);
     });
 }
 
@@ -144,6 +162,39 @@ function createMemberCard(member) {
     return card;
 }
 
+// Create individual member list item (text-based for list view)
+function createMemberListItem(member) {
+    // Create list item element
+    const listItem = document.createElement('div');
+    listItem.className = `member-list-item ${getMembershipClass(member.membershipLevel)}`;
+    
+    // Create membership badge (inline)
+    const membershipBadge = document.createElement('span');
+    membershipBadge.className = `membership-badge ${getMembershipClass(member.membershipLevel)}`;
+    membershipBadge.textContent = getMembershipText(member.membershipLevel);
+    
+    // Create the text content
+    listItem.innerHTML = `
+        <div class="member-list-content">
+            <div class="member-list-header">
+                <h3 class="member-list-name">${member.name}</h3>
+                ${membershipBadge.outerHTML}
+            </div>
+            <div class="member-list-details">
+                <span class="member-detail"><strong>Address:</strong> ${member.address}</span>
+                <span class="member-detail"><strong>Phone:</strong> ${member.phone}</span>
+                <span class="member-detail"><strong>Industry:</strong> ${member.industry}</span>
+                <span class="member-detail"><strong>Employees:</strong> ${member.employees}</span>
+                <span class="member-detail"><strong>Est:</strong> ${member.yearEstablished}</span>
+                <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="member-list-website">Visit Website</a>
+            </div>
+            <p class="member-list-description">${member.description}</p>
+        </div>
+    `;
+    
+    return listItem;
+}
+
 // Get membership level CSS class
 function getMembershipClass(level) {
     switch (level) {
@@ -172,11 +223,13 @@ function getMembershipText(level) {
 
 // Set view type (grid or list)
 function setView(viewType) {
+    console.log('setView called with:', viewType);
     const container = document.getElementById('members-container');
     const gridBtn = document.getElementById('grid-view');
     const listBtn = document.getElementById('list-view');
     
     if (!container || !gridBtn || !listBtn) {
+        console.error('Required elements not found:', { container, gridBtn, listBtn });
         return;
     }
     
@@ -193,6 +246,11 @@ function setView(viewType) {
     
     // Store preference in localStorage
     localStorage.setItem('chamberViewPreference', viewType);
+    
+    // Refresh member display with new view type
+    if (window.currentMemberData) {
+        displayMembers(window.currentMemberData);
+    }
     
     // Announce change to screen readers
     announceViewChange(viewType);
