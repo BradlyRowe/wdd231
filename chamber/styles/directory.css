@@ -2,8 +2,12 @@
 :root {
     --blue: #2563eb; --navy: #1e3a8a; --gold: #f59e0b;
     --dark: #1f2937; --light: #6b7280; --white: #fff;
-    --gray: #f8fafc; --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --gray: #f8fafc; --border: #e5e7eb; --error: #dc2626;
+    --error-bg: #fef2f2; --error-border: #fecaca;
+    --white-10: rgba(255,255,255,0.1); --white-20: rgba(255,255,255,0.2);
+    --blue-10: rgba(37,99,235,0.1); --black-10: rgba(0,0,0,0.1); 
+    --black-15: rgba(0,0,0,0.15); --transparent: transparent;
+    --shadow: 0 1px 3px var(--black-10);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,7 +42,7 @@ header {
 
 .hamburger {
     display: flex; flex-direction: column; justify-content: space-around;
-    width: 2rem; height: 2rem; background: transparent; border: none;
+    width: 2rem; height: 2rem; background: var(--transparent); border: none;
     cursor: pointer; padding: 0.25rem;
 }
 
@@ -61,7 +65,7 @@ header {
 }
 
 .navigation.open ul { display: flex; }
-.navigation li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.navigation li { border-bottom: 1px solid var(--white-10); }
 
 .navigation a {
     display: block; padding: 1rem; color: var(--white);
@@ -96,12 +100,12 @@ main { padding: 2rem 1rem; }
 }
 
 .view-btn {
-    background: transparent; border: none; padding: 0.5rem 1rem;
+    background: var(--transparent); border: none; padding: 0.5rem 1rem;
     border-radius: 6px; cursor: pointer; font-weight: 500;
     color: var(--dark); transition: all 0.2s;
 }
 
-.view-btn:hover, .view-btn:focus { background: rgba(37,99,235,0.1); }
+.view-btn:hover, .view-btn:focus { background: var(--blue-10); }
 .view-btn.active { background: var(--blue); color: var(--white); }
 
 /* Member Directory */
@@ -120,7 +124,7 @@ main { padding: 2rem 1rem; }
 
 .member-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px var(--black-15);
 }
 
 .member-image {
@@ -188,7 +192,7 @@ footer {
 .footer-section a:hover { color: var(--gold); }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid var(--white-20);
     text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.875rem;
 }
 
@@ -220,7 +224,7 @@ footer {
 }
 
 .error {
-    text-align: center; padding: 3rem; color: #dc2626;
-    background: #fef2f2; border: 1px solid #fecaca;
+    text-align: center; padding: 3rem; color: var(--error);
+    background: var(--error-bg); border: 1px solid var(--error-border);
     border-radius: 8px; margin: 2rem 0;
 }
