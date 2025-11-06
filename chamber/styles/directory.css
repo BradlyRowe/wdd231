@@ -8,7 +8,22 @@
     --white: #ffffff;
     --gray-light: #f8fafc;
     --border-light: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --error-red: #dc2626;
+    --error-bg: #fef2f2;
+    --error-border: #fecaca;
+    
+    /* Opacity variations */
+    --white-10: rgba(255, 255, 255, 0.1);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --blue-10: rgba(37, 99, 235, 0.1);
+    --black-10: rgba(0, 0, 0, 0.1);
+    --black-15: rgba(0, 0, 0, 0.15);
+    
+    /* Shadows */
+    --shadow: 0 1px 3px var(--black-10);
+    --shadow-hover: 0 8px 25px var(--black-15);
+    
+    /* Fonts */
     --font-heading: 'Merriweather', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -121,7 +136,7 @@ header {
 }
 
 .navigation li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--white-10);
 }
 
 .navigation a {
@@ -135,7 +150,7 @@ header {
 
 .navigation a:hover,
 .navigation a.active {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
 }
 
 /* Main Content */
@@ -192,7 +207,7 @@ main {
 }
 
 .view-btn:hover {
-    background: rgba(37, 99, 235, 0.1);
+    background: var(--blue-10);
 }
 
 .view-btn.active {
@@ -226,7 +241,7 @@ main {
 
 .member-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .member-image {
@@ -343,7 +358,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--white-20);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -404,9 +419,9 @@ footer {
 .error {
     text-align: center;
     padding: 3rem;
-    color: #dc2626;
-    background: #fef2f2;
-    border: 1px solid #fecaca;
+    color: var(--error-red);
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
     border-radius: 8px;
     margin: 2rem 0;
 }
