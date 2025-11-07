@@ -1,27 +1,8 @@
-/* Ultra-Compact Roy City Chamber CSS - <200 declarations */
+/* Ultra-Compact Roy City Chamber Directory CSS - <200 declarations */
 :root { --b:#2563eb; --n:#1e3a8a; --g:#f59e0b; --d:#1f2937; --l:#6b7280; --w:#fff; --gr:#f8fafc; --br:#e5e7eb; --sh:0 1px 3px rgba(0,0,0,0.1); }
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font:1rem/1.6 'Inter',sans-serif; color:var(--d); background:var(--w); }
-.container,.header-content,main,.footer-content { max-width:1200px; margin:0 auto; padding:0 1rem; }
-header { background:linear-gradient(135deg,var(--b),var(--n)); color:#f8fafc; padding:1rem; box-shadow:var(--sh); }
-.header-content,.logo-section { display:flex; align-items:center; }
-.header-content { justify-content:space-between; }
-.logo-section { gap:1rem; }
-.logo { width:60px; height:60px; background:var(--w); border-radius:50%; padding:8px; color:var(--d) !important; }
-.site-name { color:#f8fafc; background:none; }
-.site-name h1 { font:700 1.5rem 'Merriweather',serif; color:#f8fafc; }
-.site-name p { font-size:0.875rem; opacity:0.9; color:#f8fafc; }
-.hamburger { display:flex; flex-direction:column; justify-content:space-around; width:2rem; height:2rem; background:transparent; border:none; cursor:pointer; padding:0.25rem; }
-.hamburger span { width:2rem; height:0.25rem; background:var(--w); border-radius:10px; transition:all 0.3s; transform-origin:1px; }
-.hamburger.active span:first-child { transform:rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity:0; }
-.hamburger.active span:nth-child(3) { transform:rotate(-45deg); }
-.navigation { background:var(--n); color:var(--w); box-shadow:var(--sh); }
-.navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; display:none; flex-direction:column; }
-.navigation.open ul { display:flex; }
-.navigation li { border-bottom:1px solid rgba(255,255,255,0.1); }
-.navigation a { display:block; padding:1rem; color:var(--w); text-decoration:none; font-weight:500; transition:background 0.3s; }
-.navigation a:hover,.navigation a:focus,.navigation a.active { background:var(--b); }
+.container,main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 main { padding:2rem 1rem; }
 .directory-header { text-align:center; margin-bottom:2rem; }
 .directory-header h2 { font:700 2.5rem 'Merriweather',serif; color:var(--n); margin-bottom:0.5rem; }
@@ -49,18 +30,8 @@ main { padding:2rem 1rem; }
 .member-list-website { color:var(--b); text-decoration:none; font-weight:500; }
 .member-list-description { font-size:0.8rem; color:var(--l); margin:0; line-height:1.4; }
 
-footer { background:var(--n); color:var(--w); padding:2rem 0; margin-top:4rem; }
-.footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; }
-.footer-section h3 { font:1.125rem 'Merriweather',serif; margin-bottom:1rem; color:var(--g); }
-.footer-section p,.footer-section a { color:var(--w); text-decoration:none; margin-bottom:0.5rem; display:block; }
-.footer-section a:hover { color:var(--g); }
-.social-icons { display:flex; gap:1rem; }
-.social-icons svg { width:24px; height:24px; }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.2); text-align:center; padding:1rem; margin-top:2rem; font-size:0.875rem; }
+/* Responsive */
 @media (min-width:768px) { 
-    .hamburger { display:none; } 
-    .navigation ul { display:flex !important; flex-direction:row; } 
-    .navigation li { border-bottom:none; } 
     .directory-header h2 { font-size:2.8rem; } 
     .members-grid { grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
 }
