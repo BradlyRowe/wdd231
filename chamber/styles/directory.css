@@ -1,34 +1,33 @@
 /* Ultra-Compact Roy City Chamber Directory CSS - <200 declarations */
-:root { --b:#2563eb; --n:#1e3a8a; --g:#f59e0b; --d:#1f2937; --l:#6b7280; --w:#fff; --gr:#f8fafc; --br:#e5e7eb; --sh:0 1px 3px rgba(0,0,0,0.1); }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font:1rem/1.6 'Inter',sans-serif; color:var(--d); background:var(--w); }
+body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#fff; }
 .container,main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 main { padding:2rem 1rem; }
 .directory-header { text-align:center; margin-bottom:2rem; }
-.directory-header h2 { font:700 2.5rem 'Merriweather',serif; color:var(--n); margin-bottom:0.5rem; }
-.directory-header p { font-size:1.125rem; color:var(--l); }
-.view-toggle { display:flex; gap:0.25rem; background:var(--gr); border-radius:6px; padding:0.2rem; margin:1.5rem auto; width:fit-content; }
-.view-btn { background:transparent; border:none; padding:0.4rem 0.8rem; border-radius:4px; cursor:pointer; font-weight:500; color:var(--d); display:flex; align-items:center; gap:0.4rem; }
+.directory-header h2 { font:700 2.5rem 'Merriweather',serif; color:#1e3a8a; margin-bottom:0.5rem; }
+.directory-header p { font-size:1.125rem; color:#6b7280; }
+.view-toggle { display:flex; gap:0.25rem; background:#f8fafc; border-radius:6px; padding:0.2rem; margin:1.5rem auto; width:fit-content; }
+.view-btn { background:transparent; border:none; padding:0.4rem 0.8rem; border-radius:4px; cursor:pointer; font-weight:500; color:#1f2937; display:flex; align-items:center; gap:0.4rem; }
 .view-btn svg { width:16px; height:16px; }
 .view-btn:hover,.view-btn:focus { background:rgba(37,99,235,0.1); }
-.view-btn.active { background:var(--b); color:var(--w); }
+.view-btn.active { background:#2563eb; color:#fff; }
 
 .members-grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
 .members-list { display:flex; flex-direction:column; gap:0.75rem; }
-.member-card { background:var(--w); border:1px solid var(--br); border-radius:8px; box-shadow:var(--sh); }
-.member-card h3 { font:600 1.1rem sans-serif; color:var(--n); margin:0.75rem; }
+.member-card { background:#fff; border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+.member-card h3 { font:600 1.1rem sans-serif; color:#1e3a8a; margin:0.75rem; }
 .member-info { padding:0 0.75rem 0.75rem; }
-.member-info p { color:var(--l); margin-bottom:0.25rem; font-size:0.8rem; }
-.membership-level { color:var(--l); font-size:0.8rem; font-weight:500; margin:0.75rem; }
-.member-website { background:var(--b); color:var(--w); padding:0.4rem 0.8rem; border-radius:4px; text-decoration:none; font-weight:500; margin:0 0.75rem 0.75rem; }
-.member-list-item { background:var(--w); border:1px solid var(--br); border-radius:6px; padding:0.75rem 1rem; }
+.member-info p { color:#6b7280; margin-bottom:0.25rem; font-size:0.8rem; }
+.membership-level { color:#6b7280; font-size:0.8rem; font-weight:500; margin:0.75rem; }
+.member-website { background:#2563eb; color:#fff; padding:0.4rem 0.8rem; border-radius:4px; text-decoration:none; font-weight:500; margin:0 0.75rem 0.75rem; }
+.member-list-item { background:#fff; border:1px solid #e5e7eb; border-radius:6px; padding:0.75rem 1rem; }
 .member-list-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; }
-.member-list-name { font:600 1rem sans-serif; color:var(--n); margin:0; }
-.membership-badge { color:var(--l); font-size:0.8rem; font-weight:500; }
+.member-list-name { font:600 1rem sans-serif; color:#1e3a8a; margin:0; }
+.membership-badge { color:#6b7280; font-size:0.8rem; font-weight:500; }
 .member-list-details { display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:0.5rem; font-size:0.8rem; }
-.member-detail { color:var(--l); }
-.member-list-website { color:var(--b); text-decoration:none; font-weight:500; }
-.member-list-description { font-size:0.8rem; color:var(--l); margin:0; line-height:1.4; }
+.member-detail { color:#6b7280; }
+.member-list-website { color:#2563eb; text-decoration:none; font-weight:500; }
+.member-list-description { font-size:0.8rem; color:#6b7280; margin:0; line-height:1.4; }
 
 /* Responsive */
 @media (min-width:768px) { 
@@ -36,5 +35,5 @@ main { padding:2rem 1rem; }
     .members-grid { grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
 }
 @media (min-width:1024px) { .members-grid { grid-template-columns:repeat(3,1fr); } }
-.loading { text-align:center; padding:2rem; color:var(--l); }
+.loading { text-align:center; padding:2rem; color:#6b7280; }
 .error { text-align:center; padding:2rem; color:#dc2626; background:#fef2f2; border:1px solid #fecaca; border-radius:6px; margin:1rem 0; }
