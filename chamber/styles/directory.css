@@ -7,7 +7,7 @@ main { padding:2rem 1rem; }
 .directory-header { text-align:center; margin-bottom:2rem; }
 .directory-header h2 { font:700 2.5rem 'Merriweather',serif; color:var(--n); margin-bottom:0.5rem; }
 .directory-header p { font-size:1.125rem; color:var(--l); }
-.view-toggle { display:flex; gap:0.25rem; background:var(--d); border-radius:6px; padding:0.2rem; margin:1.5rem auto; width:fit-content; }
+.view-toggle { display:flex; gap:0.25rem; background:var(--gr); border-radius:6px; padding:0.2rem; margin:1.5rem auto; width:fit-content; }
 .view-btn { background:transparent; border:none; padding:0.4rem 0.8rem; border-radius:4px; cursor:pointer; font-weight:500; color:var(--d); display:flex; align-items:center; gap:0.4rem; }
 .view-btn svg { width:16px; height:16px; }
 .view-btn:hover,.view-btn:focus { background:rgba(37,99,235,0.1); }
