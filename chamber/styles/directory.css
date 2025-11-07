@@ -1,6 +1,6 @@
 /* Ultra-Compact Roy City Chamber Directory CSS - <200 declarations */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#fff; }
+body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 .container,main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 main { padding:2rem 1rem; }
 .directory-header { text-align:center; margin-bottom:2rem; }
@@ -10,17 +10,17 @@ main { padding:2rem 1rem; }
 .view-btn { background:transparent; border:none; padding:0.4rem 0.8rem; border-radius:4px; cursor:pointer; font-weight:500; color:#1f2937; display:flex; align-items:center; gap:0.4rem; }
 .view-btn svg { width:16px; height:16px; }
 .view-btn:hover,.view-btn:focus { background:rgba(37,99,235,0.1); }
-.view-btn.active { background:#2563eb; color:#fff; }
+.view-btn.active { background:#2563eb; color:#ffffff; }
 
 .members-grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
 .members-list { display:flex; flex-direction:column; gap:0.75rem; }
-.member-card { background:#fff; border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+.member-card { background:#ffffff; border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
 .member-card h3 { font:600 1.1rem sans-serif; color:#1e3a8a; margin:0.75rem; }
 .member-info { padding:0 0.75rem 0.75rem; }
 .member-info p,.membership-level { color:#6b7280; font-size:0.8rem; margin-bottom:0.25rem; }
 .membership-level { font-weight:500; margin:0.75rem; }
-.member-website { background:#2563eb; color:#fff; padding:0.4rem 0.8rem; border-radius:4px; text-decoration:none; font-weight:500; margin:0 0.75rem 0.75rem; }
-.member-list-item { background:#fff; border:1px solid #e5e7eb; border-radius:6px; padding:0.75rem 1rem; }
+.member-website { background:#2563eb; color:#ffffff; padding:0.4rem 0.8rem; border-radius:4px; text-decoration:none; font-weight:500; margin:0 0.75rem 0.75rem; }
+.member-list-item { background:#ffffff; border:1px solid #e5e7eb; border-radius:6px; padding:0.75rem 1rem; }
 .member-list-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; }
 .member-list-name { font:600 1rem sans-serif; color:#1e3a8a; margin:0; }
 .membership-badge,.member-detail { color:#6b7280; font-size:0.8rem; }

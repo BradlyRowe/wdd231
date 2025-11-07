@@ -1,27 +1,27 @@
 /* Roy City Chamber Header CSS */
 /* Header */
-header { background:linear-gradient(135deg,#2563eb,#1e3a8a) !important; color:#fff !important; padding:1rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
-header h1, header p, header span:not(.logo *), header a { color:#fff !important; background:transparent !important; }
+header { background:linear-gradient(135deg,#2563eb,#1e3a8a); color:#ffffff; padding:1rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+header h1, header p, header span:not(.logo *), header a { color:#ffffff; background:transparent; }
 .header-content { max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; align-items:center; justify-content:space-between; }
 .logo-section { display:flex; align-items:center; gap:1rem; }
-.logo { width:60px; height:60px; background:#fff !important; border-radius:50%; padding:8px; color:#1f2937 !important; }
+.logo { width:60px; height:60px; background:#ffffff; border-radius:50%; padding:8px; color:#1f2937; }
 .site-name h1 { font:700 1.5rem 'Merriweather',serif; }
 .site-name p { font-size:0.875rem; opacity:0.9; }
 
 /* Hamburger Menu */
 .hamburger { display:flex; flex-direction:column; justify-content:space-around; width:2rem; height:2rem; background:transparent; border:none; cursor:pointer; padding:0.25rem; }
-.hamburger span { width:2rem; height:0.25rem; background:#fff !important; border-radius:10px; transition:all 0.3s; transform-origin:1px; }
+.hamburger span { width:2rem; height:0.25rem; background:#ffffff; border-radius:10px; transition:all 0.3s; transform-origin:1px; }
 .hamburger.active span:first-child { transform:rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity:0; }
 .hamburger.active span:nth-child(3) { transform:rotate(-45deg); }
 
 /* Navigation */
-.navigation { background:#1e3a8a !important; color:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+.navigation { background:#1e3a8a; color:#ffffff; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
 .navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; display:none; flex-direction:column; }
 .navigation.open ul { display:flex; }
 .navigation li { border-bottom:1px solid rgba(255,255,255,0.1); }
-.navigation a { display:block; padding:1rem; text-decoration:none; font-weight:500; transition:background 0.3s; }
-.navigation a:hover,.navigation a:focus,.navigation a.active { background:#2563eb !important; }
+.navigation a { display:block; padding:1rem; color:#ffffff; text-decoration:none; font-weight:500; transition:background 0.3s; }
+.navigation a:hover,.navigation a:focus,.navigation a.active { background:#2563eb; color:#ffffff; }
 
 /* Responsive */
 @media (min-width:768px) { 
