@@ -83,16 +83,12 @@ function displayMembers(members) {
     // Clear existing content
     container.innerHTML = '';
     
-    // Sort members alphabetically by name
-    const sortedMembers = members.sort((a, b) => a.name.localeCompare(b.name));
-    
     // Determine current view type
     const isListView = container.classList.contains('members-list');
     
     // Create member elements based on view type
-    sortedMembers.forEach((member, index) => {
+    members.forEach((member) => {
         const memberElement = isListView ? createMemberListItem(member) : createMemberCard(member);
-        memberElement.style.animationDelay = `${index * 0.1}s`;
         container.appendChild(memberElement);
     });
 }
@@ -106,22 +102,7 @@ function createMemberCard(member) {
     // Create membership level badge
     const membershipBadge = document.createElement('div');
     membershipBadge.className = `membership-level ${getMembershipClass(member.membershipLevel)}`;
-    membershipBadge.textContent = getMembershipText(member.membershipLevel);
-    
-    // Create member logo/image
-    const logo = document.createElement('img');
-    logo.className = 'member-logo';
-    logo.src = member.image;
-    logo.alt = `${member.name} logo`;
-    logo.loading = 'lazy';
-    // Fallback for missing images
-    logo.onerror = function() {
-        this.style.display = 'none';
-        const placeholder = document.createElement('div');
-        placeholder.className = 'member-logo';
-        placeholder.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f3f4f6; color: #6b7280; font-weight: 600; font-size: 0.875rem;">${member.name.charAt(0)}</div>`;
-        this.parentNode.replaceChild(placeholder, this);
-    };
+    membershipBadge.textContent = `Member Level: ${getMembershipText(member.membershipLevel)}`;
     
     // Create member name
     const name = document.createElement('h3');
@@ -152,11 +133,10 @@ function createMemberCard(member) {
     website.textContent = 'Visit Website →';
     
     // Assemble the card
-    card.appendChild(membershipBadge);
-    card.appendChild(logo);
     card.appendChild(name);
     card.appendChild(info);
     card.appendChild(description);
+    card.appendChild(membershipBadge);
     card.appendChild(website);
     
     return card;
@@ -171,7 +151,7 @@ function createMemberListItem(member) {
     // Create membership badge (inline)
     const membershipBadge = document.createElement('span');
     membershipBadge.className = `membership-badge ${getMembershipClass(member.membershipLevel)}`;
-    membershipBadge.textContent = getMembershipText(member.membershipLevel);
+    membershipBadge.textContent = `Member Level: ${getMembershipText(member.membershipLevel)}`;
     
     // Create the text content
     listItem.innerHTML = `
