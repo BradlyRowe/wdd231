@@ -1,12 +1,9 @@
 /* Roy City Chamber Header CSS */
-.header-content { max-width:1200px; margin:0 auto; padding:0 1rem; }
-
 /* Header */
 header { background:linear-gradient(135deg,#2563eb,#1e3a8a) !important; color:#fff !important; padding:1rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
 header h1, header p, header span:not(.logo *), header a { color:#fff !important; background:transparent !important; }
-.header-content,.logo-section { display:flex; align-items:center; }
-.header-content { justify-content:space-between; }
-.logo-section { gap:1rem; }
+.header-content { max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; align-items:center; justify-content:space-between; }
+.logo-section { display:flex; align-items:center; gap:1rem; }
 .logo { width:60px; height:60px; background:#fff !important; border-radius:50%; padding:8px; color:#1f2937 !important; }
 .site-name h1 { font:700 1.5rem 'Merriweather',serif; }
 .site-name p { font-size:0.875rem; opacity:0.9; }
