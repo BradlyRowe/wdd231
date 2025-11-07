@@ -1,7 +1,7 @@
 // Roy City Chamber Home Page JavaScript
 
-// API key for OpenWeatherMap (you'll need to get your own API key)
-const WEATHER_API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your actual API key
+// API key for OpenWeatherMap - Replace with your actual API key
+const WEATHER_API_KEY = 'YOUR_API_KEY_HERE'; // Get from https://openweathermap.org/api
 const ROY_CITY_COORDS = {
     lat: 41.1616,
     lon: -112.0263
@@ -32,28 +32,38 @@ function initializeHamburgerMenu() {
     }
 }
 
-// Weather functionality
+// Weather functionality with real API integration
 async function loadWeatherData() {
+    // Check if API key is set
+    if (WEATHER_API_KEY === 'YOUR_API_KEY_HERE') {
+        console.warn('Weather API key not set. Using placeholder data.');
+        displayPlaceholderWeather();
+        return;
+    }
+
     try {
-        // Note: For demonstration, using placeholder data
-        // In production, you would use: 
-        // const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${ROY_CITY_COORDS.lat}&lon=${ROY_CITY_COORDS.lon}&appid=${WEATHER_API_KEY}&units=imperial`);
+        // Get current weather
+        const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${ROY_CITY_COORDS.lat}&lon=${ROY_CITY_COORDS.lon}&appid=${WEATHER_API_KEY}&units=imperial`;
+        const currentResponse = await fetch(currentWeatherUrl);
         
-        // Placeholder weather data for demonstration
-        const weatherData = {
-            current: {
-                temp: 42,
-                description: "partly cloudy",
-                icon: "02d"
-            },
-            forecast: [
-                { temp: 38 },
-                { temp: 45 },
-                { temp: 41 }
-            ]
-        };
+        if (!currentResponse.ok) {
+            throw new Error(`Current weather API error: ${currentResponse.status}`);
+        }
         
-        updateWeatherDisplay(weatherData);
+        const currentData = await currentResponse.json();
+        
+        // Get 5-day forecast
+        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${ROY_CITY_COORDS.lat}&lon=${ROY_CITY_COORDS.lon}&appid=${WEATHER_API_KEY}&units=imperial`;
+        const forecastResponse = await fetch(forecastUrl);
+        
+        if (!forecastResponse.ok) {
+            throw new Error(`Forecast API error: ${forecastResponse.status}`);
+        }
+        
+        const forecastData = await forecastResponse.json();
+        
+        // Process and display weather data
+        updateWeatherDisplay(currentData, forecastData);
         
     } catch (error) {
         console.error('Error loading weather data:', error);
@@ -61,20 +71,84 @@ async function loadWeatherData() {
     }
 }
 
-function updateWeatherDisplay(data) {
+function updateWeatherDisplay(currentData, forecastData) {
     // Update current weather
     const tempElement = document.getElementById('current-temp');
     const descElement = document.getElementById('weather-desc');
     const iconElement = document.getElementById('weather-icon');
     
+    if (tempElement) tempElement.textContent = `${Math.round(currentData.main.temp)}°F`;
+    if (descElement) descElement.textContent = currentData.weather[0].description;
+    if (iconElement) {
+        iconElement.src = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
+        iconElement.alt = currentData.weather[0].description;
+        iconElement.style.display = 'block';
+    }
+    
+    // Update 3-day forecast (skip today, get next 3 days at noon)
+    const dailyForecasts = getForecastDays(forecastData.list);
+    
+    dailyForecasts.forEach((forecast, index) => {
+        const forecastElement = document.getElementById(`forecast-${index + 1}`);
+        if (forecastElement && forecast) {
+            forecastElement.textContent = `${Math.round(forecast.main.temp)}°F`;
+        }
+    });
+}
+
+function getForecastDays(forecastList) {
+    // Get forecasts for the next 3 days at approximately noon (12:00)
+    const dailyForecasts = [];
+    const today = new Date().getDate();
+    
+    for (let i = 0; i < forecastList.length && dailyForecasts.length < 3; i++) {
+        const forecast = forecastList[i];
+        const forecastDate = new Date(forecast.dt * 1000);
+        const forecastHour = forecastDate.getHours();
+        const forecastDay = forecastDate.getDate();
+        
+        // Get forecast around noon for days after today
+        if (forecastDay !== today && forecastHour >= 11 && forecastHour <= 13) {
+            dailyForecasts.push(forecast);
+        }
+    }
+    
+    return dailyForecasts;
+}
+
+function displayPlaceholderWeather() {
+    // Placeholder weather data for demonstration when API key is not set
+    const placeholderData = {
+        current: {
+            temp: 42,
+            description: "partly cloudy",
+            icon: "02d"
+        },
+        forecast: [
+            { temp: 38 },
+            { temp: 45 },
+            { temp: 41 }
+        ]
+    };
+    
+    updatePlaceholderWeather(placeholderData);
+}
+
+function updatePlaceholderWeather(data) {
+    // Update current weather with placeholder
+    const tempElement = document.getElementById('current-temp');
+    const descElement = document.getElementById('weather-desc');
+    const iconElement = document.getElementById('weather-icon');
+    
     if (tempElement) tempElement.textContent = `${data.current.temp}°F`;
-    if (descElement) descElement.textContent = data.current.description;
+    if (descElement) descElement.textContent = `${data.current.description} (demo)`;
     if (iconElement) {
         iconElement.src = `https://openweathermap.org/img/w/${data.current.icon}.png`;
         iconElement.alt = data.current.description;
+        iconElement.style.display = 'block';
     }
     
-    // Update forecast
+    // Update forecast with placeholder
     data.forecast.forEach((day, index) => {
         const forecastElement = document.getElementById(`forecast-${index + 1}`);
         if (forecastElement) {
@@ -86,21 +160,39 @@ function updateWeatherDisplay(data) {
 function displayWeatherError() {
     const tempElement = document.getElementById('current-temp');
     const descElement = document.getElementById('weather-desc');
+    const iconElement = document.getElementById('weather-icon');
     
     if (tempElement) tempElement.textContent = 'N/A';
     if (descElement) descElement.textContent = 'Weather data unavailable';
+    if (iconElement) iconElement.style.display = 'none';
+    
+    // Clear forecast
+    for (let i = 1; i <= 3; i++) {
+        const forecastElement = document.getElementById(`forecast-${i}`);
+        if (forecastElement) forecastElement.textContent = '--°F';
+    }
 }
 
 // Member spotlight functionality
 async function loadMemberSpotlights() {
     try {
         const response = await fetch('data/members.json');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const members = await response.json();
         
         // Filter for gold and silver members
         const premiumMembers = members.filter(member => 
-            member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
+            member.membershipLevel && 
+            (member.membershipLevel.toLowerCase() === 'gold' || member.membershipLevel.toLowerCase() === 'silver')
         );
+        
+        if (premiumMembers.length === 0) {
+            throw new Error('No premium members found');
+        }
         
         // Randomly select 2-3 members
         const spotlightCount = Math.floor(Math.random() * 2) + 2; // 2 or 3

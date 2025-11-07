@@ -79,6 +79,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
     align-items:center; 
     gap:1rem; 
     margin-bottom:1.5rem;
+    flex-wrap:wrap;
 }
 .weather-temp { 
     font:700 2rem sans-serif; 
@@ -88,10 +89,16 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
     color:#6b7280; 
     font-size:1rem; 
     text-transform:capitalize;
+    flex:1;
+    min-width:120px;
 }
 .weather-icon { 
     width:64px; 
     height:64px;
+    display:none;
+    background:#f8fafc;
+    border-radius:8px;
+    padding:4px;
 }
 .weather-forecast h4 { 
     font:600 1.1rem sans-serif; 
