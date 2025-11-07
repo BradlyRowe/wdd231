@@ -2,9 +2,9 @@
 /* Footer */
 footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
 .footer-content { max-width:1200px; margin:0 auto; padding:0 1rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; }
-.footer-section h3 { font:1.125rem 'Merriweather',serif; margin-bottom:1rem; color:#f59e0b; }
+.footer-section h3 { font:1.125rem 'Merriweather',serif; margin-bottom:1rem; color:#fbbf24; }
 .footer-section p,.footer-section a { color:#ffffff; text-decoration:none; margin-bottom:0.5rem; display:block; }
-.footer-section a:hover { color:#f59e0b; }
+.footer-section a:hover { color:#fbbf24; }
 .social-icons { display:flex; gap:1rem; }
 .social-icons svg { width:24px; height:24px; }
 .footer-bottom { border-top:1px solid rgba(255,255,255,0.2); text-align:center; padding:1rem; margin-top:2rem; font-size:0.875rem; }

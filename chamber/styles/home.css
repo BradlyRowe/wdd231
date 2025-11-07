@@ -13,7 +13,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 .hero-content h2 { font:700 2.5rem 'Merriweather',serif; margin-bottom:1rem; }
 .hero-content p { font-size:1.125rem; margin-bottom:2rem; max-width:600px; margin-left:auto; margin-right:auto; }
 .cta-button { 
-    background:#f59e0b; 
+    background:#d97706; 
     color:#ffffff; 
     padding:1rem 2rem; 
     border-radius:6px; 
@@ -23,7 +23,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
     display:inline-block;
     transition:background 0.3s;
 }
-.cta-button:hover { background:#d97706; }
+.cta-button:hover { background:#b45309; }
 
 /* Home Grid Layout */
 .home-grid { 
@@ -56,7 +56,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 }
 .event:last-child { margin-bottom:0; border-bottom:none; }
 .event h4 { font:600 1.1rem sans-serif; color:#1e3a8a; margin-bottom:0.25rem; }
-.event-date { color:#f59e0b; font-weight:500; font-size:0.875rem; margin-bottom:0.5rem; display:block; }
+.event-date { color:#b45309; font-weight:500; font-size:0.875rem; margin-bottom:0.5rem; display:block; }
 .event p:last-child { color:#6b7280; font-size:0.9rem; line-height:1.5; }
 
 /* Weather Section */
@@ -180,7 +180,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
     margin-bottom:0.5rem;
 }
 .spotlight-level { 
-    background:#f59e0b; 
+    background:#b45309; 
     color:#ffffff; 
     padding:0.25rem 0.75rem; 
     border-radius:12px; 
