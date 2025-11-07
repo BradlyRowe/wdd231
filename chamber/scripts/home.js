@@ -75,14 +75,17 @@ function updateWeatherDisplay(currentData, forecastData) {
     // Update current weather
     const tempElement = document.getElementById('current-temp');
     const descElement = document.getElementById('weather-desc');
-    const iconElement = document.getElementById('weather-icon');
+    const iconContainer = document.getElementById('weather-icon-container');
     
     if (tempElement) tempElement.textContent = `${Math.round(currentData.main.temp)}°F`;
     if (descElement) descElement.textContent = currentData.weather[0].description;
-    if (iconElement) {
-        iconElement.src = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
-        iconElement.alt = currentData.weather[0].description;
-        iconElement.style.display = 'block';
+    if (iconContainer) {
+        const iconImg = document.createElement('img');
+        iconImg.src = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
+        iconImg.alt = currentData.weather[0].description;
+        iconImg.className = 'weather-icon';
+        iconContainer.innerHTML = '';
+        iconContainer.appendChild(iconImg);
     }
     
     // Update 3-day forecast (skip today, get next 3 days at noon)
@@ -138,14 +141,17 @@ function updatePlaceholderWeather(data) {
     // Update current weather with placeholder
     const tempElement = document.getElementById('current-temp');
     const descElement = document.getElementById('weather-desc');
-    const iconElement = document.getElementById('weather-icon');
+    const iconContainer = document.getElementById('weather-icon-container');
     
     if (tempElement) tempElement.textContent = `${data.current.temp}°F`;
     if (descElement) descElement.textContent = `${data.current.description} (demo)`;
-    if (iconElement) {
-        iconElement.src = `https://openweathermap.org/img/w/${data.current.icon}.png`;
-        iconElement.alt = data.current.description;
-        iconElement.style.display = 'block';
+    if (iconContainer) {
+        const iconImg = document.createElement('img');
+        iconImg.src = `https://openweathermap.org/img/w/${data.current.icon}.png`;
+        iconImg.alt = data.current.description;
+        iconImg.className = 'weather-icon';
+        iconContainer.innerHTML = '';
+        iconContainer.appendChild(iconImg);
     }
     
     // Update forecast with placeholder
@@ -160,11 +166,13 @@ function updatePlaceholderWeather(data) {
 function displayWeatherError() {
     const tempElement = document.getElementById('current-temp');
     const descElement = document.getElementById('weather-desc');
-    const iconElement = document.getElementById('weather-icon');
+    const iconContainer = document.getElementById('weather-icon-container');
     
     if (tempElement) tempElement.textContent = 'N/A';
     if (descElement) descElement.textContent = 'Weather data unavailable';
-    if (iconElement) iconElement.style.display = 'none';
+    if (iconContainer) {
+        iconContainer.innerHTML = '<span>N/A</span>';
+    }
     
     // Clear forecast
     for (let i = 1; i <= 3; i++) {

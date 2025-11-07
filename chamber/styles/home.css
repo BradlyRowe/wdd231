@@ -95,10 +95,20 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 .weather-icon { 
     width:64px; 
     height:64px;
-    display:none;
     background:#f8fafc;
     border-radius:8px;
     padding:4px;
+}
+.weather-icon-container {
+    width:64px;
+    height:64px;
+    background:#f8fafc;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#6b7280;
+    font-size:0.75rem;
 }
 .weather-forecast h4 { 
     font:600 1.1rem sans-serif; 
