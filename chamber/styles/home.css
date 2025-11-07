@@ -1,0 +1,223 @@
+/* Roy City Chamber Home Page CSS */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
+.container,main { max-width:1200px; margin:0 auto; padding:0 1rem; }
+
+/* Hero Section */
+.hero { 
+    background:linear-gradient(rgba(30,58,138,0.8), rgba(37,99,235,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop') center/cover; 
+    color:#ffffff; 
+    padding:4rem 1rem; 
+    text-align:center; 
+}
+.hero-content h2 { font:700 2.5rem 'Merriweather',serif; margin-bottom:1rem; }
+.hero-content p { font-size:1.125rem; margin-bottom:2rem; max-width:600px; margin-left:auto; margin-right:auto; }
+.cta-button { 
+    background:#f59e0b; 
+    color:#ffffff; 
+    padding:1rem 2rem; 
+    border-radius:6px; 
+    text-decoration:none; 
+    font-weight:600; 
+    font-size:1.125rem;
+    display:inline-block;
+    transition:background 0.3s;
+}
+.cta-button:hover { background:#d97706; }
+
+/* Home Grid Layout */
+.home-grid { 
+    display:grid; 
+    gap:2rem; 
+    padding:2rem 1rem; 
+    max-width:1200px; 
+    margin:0 auto;
+}
+
+/* Events Section */
+.events-section { 
+    background:#ffffff; 
+    border:1px solid #e5e7eb; 
+    border-radius:8px; 
+    padding:1.5rem; 
+    box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.events-section h3 { 
+    font:700 1.5rem 'Merriweather',serif; 
+    color:#1e3a8a; 
+    margin-bottom:1rem; 
+    border-bottom:2px solid #2563eb; 
+    padding-bottom:0.5rem;
+}
+.event { 
+    margin-bottom:1.5rem; 
+    padding-bottom:1rem; 
+    border-bottom:1px solid #e5e7eb;
+}
+.event:last-child { margin-bottom:0; border-bottom:none; }
+.event h4 { font:600 1.1rem sans-serif; color:#1e3a8a; margin-bottom:0.25rem; }
+.event-date { color:#f59e0b; font-weight:500; font-size:0.875rem; margin-bottom:0.5rem; display:block; }
+.event p:last-child { color:#6b7280; font-size:0.9rem; line-height:1.5; }
+
+/* Weather Section */
+.weather-section { 
+    background:#ffffff; 
+    border:1px solid #e5e7eb; 
+    border-radius:8px; 
+    padding:1.5rem; 
+    box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.weather-section h3 { 
+    font:700 1.5rem 'Merriweather',serif; 
+    color:#1e3a8a; 
+    margin-bottom:1rem; 
+    border-bottom:2px solid #2563eb; 
+    padding-bottom:0.5rem;
+}
+.weather-today { 
+    display:flex; 
+    align-items:center; 
+    gap:1rem; 
+    margin-bottom:1.5rem;
+}
+.weather-temp { 
+    font:700 2rem sans-serif; 
+    color:#1e3a8a;
+}
+.weather-desc { 
+    color:#6b7280; 
+    font-size:1rem; 
+    text-transform:capitalize;
+}
+.weather-icon { 
+    width:64px; 
+    height:64px;
+}
+.weather-forecast h4 { 
+    font:600 1.1rem sans-serif; 
+    color:#1e3a8a; 
+    margin-bottom:0.75rem;
+}
+.forecast-grid { 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr); 
+    gap:0.75rem;
+}
+.forecast-day { 
+    text-align:center; 
+    padding:0.75rem; 
+    background:#f8fafc; 
+    border-radius:6px;
+}
+.forecast-label { 
+    display:block; 
+    font-size:0.8rem; 
+    color:#6b7280; 
+    margin-bottom:0.25rem;
+}
+.forecast-temp { 
+    font:600 1rem sans-serif; 
+    color:#1e3a8a;
+}
+
+/* Spotlights Section */
+.spotlights-section { 
+    background:#ffffff; 
+    border:1px solid #e5e7eb; 
+    border-radius:8px; 
+    padding:1.5rem; 
+    box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.spotlights-section h3 { 
+    font:700 1.5rem 'Merriweather',serif; 
+    color:#1e3a8a; 
+    margin-bottom:1rem; 
+    border-bottom:2px solid #2563eb; 
+    padding-bottom:0.5rem;
+}
+.spotlights-grid { 
+    display:grid; 
+    gap:1.5rem;
+}
+.spotlight-card { 
+    background:#f8fafc; 
+    border:1px solid #e5e7eb; 
+    border-radius:8px; 
+    padding:1.5rem; 
+    text-align:center;
+}
+.spotlight-logo { 
+    width:80px; 
+    height:80px; 
+    background:#ffffff; 
+    border-radius:50%; 
+    margin:0 auto 1rem; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    border:2px solid #e5e7eb;
+}
+.spotlight-card h4 { 
+    font:600 1.1rem sans-serif; 
+    color:#1e3a8a; 
+    margin-bottom:0.5rem;
+}
+.spotlight-level { 
+    background:#f59e0b; 
+    color:#ffffff; 
+    padding:0.25rem 0.75rem; 
+    border-radius:12px; 
+    font-size:0.75rem; 
+    font-weight:600; 
+    margin-bottom:1rem; 
+    display:inline-block;
+}
+.spotlight-info { 
+    color:#6b7280; 
+    font-size:0.875rem; 
+    line-height:1.5;
+}
+.spotlight-info p { 
+    margin-bottom:0.25rem;
+}
+.spotlight-website { 
+    color:#2563eb; 
+    text-decoration:none; 
+    font-weight:500; 
+    margin-top:0.75rem; 
+    display:inline-block;
+}
+.spotlight-website:hover { 
+    text-decoration:underline;
+}
+
+/* Loading state */
+.loading { 
+    text-align:center; 
+    padding:2rem; 
+    color:#6b7280;
+}
+
+/* Responsive Design */
+@media (min-width:768px) {
+    .hero-content h2 { font-size:3rem; }
+    .home-grid { 
+        grid-template-columns:1fr 1fr; 
+        grid-template-areas:
+            "events weather"
+            "spotlights spotlights";
+    }
+    .events-section { grid-area:events; }
+    .weather-section { grid-area:weather; }
+    .spotlights-section { grid-area:spotlights; }
+    .spotlights-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+@media (min-width:1024px) {
+    .home-grid { 
+        grid-template-columns:2fr 1fr 2fr;
+        grid-template-areas:
+            "events weather spotlights";
+    }
+    .spotlights-grid { grid-template-columns:1fr; }
+}
