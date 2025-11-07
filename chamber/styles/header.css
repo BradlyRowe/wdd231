@@ -1,5 +1,5 @@
 /* Roy City Chamber Header CSS */
-:root { --b:#2563eb; --n:#1e3a8a; --g:#f59e0b; --d:#1f2937; --l:#6b7280; --w:#fff; --gr:#f8fafc; --br:#e5e7eb; --sh:0 1px 3px rgba(0,0,0,0.1); }
+:root { --b:#2563eb; --n:#1e3a8a; --g:#f59e0b; --d:#1f2937; --l:#6b7280; --w:#fff; --gr:#23313f; --br:#e5e7eb; --sh:0 1px 3px rgba(0,0,0,0.1); }
 
 * { margin:0; padding:0; box-sizing:border-box; }
 .container,.header-content { max-width:1200px; margin:0 auto; padding:0 1rem; }
