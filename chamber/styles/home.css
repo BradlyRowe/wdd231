@@ -1,11 +1,26 @@
 /* Roy City Chamber Home Page CSS */
-* { margin:0; padding:0; box-sizing:border-box; }
 body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 .container,main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 
+/* Shared styles */
+.card-shadow { box-shadow:0 1px 3px #00000019; }
+.section-card { 
+    background:#ffffff; 
+    border:1px solid #e5e7eb; 
+    border-radius:8px; 
+    padding:1.5rem; 
+}
+.section-title { 
+    font:700 1.5rem 'Merriweather',serif; 
+    color:#1e3a8a; 
+    margin-bottom:1rem; 
+    border-bottom:2px solid #2563eb; 
+    padding-bottom:0.5rem;
+}
+
 /* Hero Section */
 .hero { 
-    background:linear-gradient(rgba(30,58,138,0.8), rgba(37,99,235,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop') center/cover; 
+    background:linear-gradient(#1e3a8acc, #2563ebcc), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop') center/cover; 
     color:#ffffff; 
     padding:4rem 1rem; 
     text-align:center; 
@@ -35,20 +50,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 }
 
 /* Events Section */
-.events-section { 
-    background:#ffffff; 
-    border:1px solid #e5e7eb; 
-    border-radius:8px; 
-    padding:1.5rem; 
-    box-shadow:0 1px 3px rgba(0,0,0,0.1);
-}
-.events-section h3 { 
-    font:700 1.5rem 'Merriweather',serif; 
-    color:#1e3a8a; 
-    margin-bottom:1rem; 
-    border-bottom:2px solid #2563eb; 
-    padding-bottom:0.5rem;
-}
+.events-section { grid-area:events; }
 .event { 
     margin-bottom:1.5rem; 
     padding-bottom:1rem; 
@@ -60,20 +62,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 .event p:last-child { color:#6b7280; font-size:0.9rem; line-height:1.5; }
 
 /* Weather Section */
-.weather-section { 
-    background:#ffffff; 
-    border:1px solid #e5e7eb; 
-    border-radius:8px; 
-    padding:1.5rem; 
-    box-shadow:0 1px 3px rgba(0,0,0,0.1);
-}
-.weather-section h3 { 
-    font:700 1.5rem 'Merriweather',serif; 
-    color:#1e3a8a; 
-    margin-bottom:1rem; 
-    border-bottom:2px solid #2563eb; 
-    padding-bottom:0.5rem;
-}
+.weather-section { grid-area:weather; }
 .weather-today { 
     display:flex; 
     align-items:center; 
@@ -138,20 +127,7 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 }
 
 /* Spotlights Section */
-.spotlights-section { 
-    background:#ffffff; 
-    border:1px solid #e5e7eb; 
-    border-radius:8px; 
-    padding:1.5rem; 
-    box-shadow:0 1px 3px rgba(0,0,0,0.1);
-}
-.spotlights-section h3 { 
-    font:700 1.5rem 'Merriweather',serif; 
-    color:#1e3a8a; 
-    margin-bottom:1rem; 
-    border-bottom:2px solid #2563eb; 
-    padding-bottom:0.5rem;
-}
+.spotlights-section { grid-area:spotlights; }
 .spotlights-grid { 
     display:grid; 
     gap:1.5rem;
@@ -220,21 +196,15 @@ body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
     .hero-content h2 { font-size:3rem; }
     .home-grid { 
         grid-template-columns:1fr 1fr; 
-        grid-template-areas:
-            "events weather"
-            "spotlights spotlights";
+        grid-template-areas:"events weather" "spotlights spotlights";
     }
-    .events-section { grid-area:events; }
-    .weather-section { grid-area:weather; }
-    .spotlights-section { grid-area:spotlights; }
     .spotlights-grid { grid-template-columns:repeat(2,1fr); }
 }
 
 @media (min-width:1024px) {
     .home-grid { 
         grid-template-columns:2fr 1fr 2fr;
-        grid-template-areas:
-            "events weather spotlights";
+        grid-template-areas:"events weather spotlights";
     }
     .spotlights-grid { grid-template-columns:1fr; }
 }

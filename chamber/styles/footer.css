@@ -7,4 +7,4 @@ footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
 .footer-section a:hover { color:#fbbf24; }
 .social-icons { display:flex; gap:1rem; }
 .social-icons svg { width:24px; height:24px; }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.2); text-align:center; padding:1rem; margin-top:2rem; font-size:0.875rem; }
+.footer-bottom { border-top:1px solid #ffffff33; text-align:center; padding:1rem; margin-top:2rem; font-size:0.875rem; }
