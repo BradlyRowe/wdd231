@@ -1,5 +1,7 @@
 /* Roy City Chamber Home Page CSS */
 body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
+/* Header override for contrast */
+header, header * { color:#ffffff !important; }
 main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 
 /* Shared */
