@@ -12,6 +12,8 @@ header * { color:#ffffff; }
 .navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; display:none; flex-direction:column; }
 .navigation.open ul { display:flex; }
 .navigation a { display:block; padding:1rem; color:#ffffff !important; text-decoration:none; }
+.navigation a.active { color:#ffffff !important; background:#2563eb; }
+.navigation a:hover { color:#ffffff !important; background:#2563eb; }
 @media (min-width:768px) { 
     .hamburger { display:none; } 
     .navigation ul { display:flex !important; flex-direction:row; } 
