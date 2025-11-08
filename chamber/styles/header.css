@@ -5,19 +5,16 @@ header * { color:#ffffff; }
 header h1, header p, header span, header a { background:transparent; }
 .header-content { max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; align-items:center; justify-content:space-between; }
 .logo-section { display:flex; align-items:center; gap:1rem; }
-.logo { width:60px; height:60px; background:#ffffff; border-radius:50%; padding:8px; color:#1f2937; border:2px solid #1e3a8a; }
-.logo, .logo *, .logo::before, .logo::after { color:#1f2937 !important; background:#ffffff !important; }
+.logo,.logo *,.logo::before,.logo::after { width:60px; height:60px; background:#ffffff; border-radius:50%; padding:8px; color:#1f2937; border:2px solid #1e3a8a; }
 .site-name h1 { font:700 1.5rem 'Merriweather',serif; }
 .site-name p { font-size:0.875rem; opacity:0.9; }
 
-/* Hamburger Menu */
+/* Menu */
 .hamburger { display:flex; flex-direction:column; justify-content:space-around; width:2rem; height:2rem; background:transparent; border:none; cursor:pointer; padding:0.25rem; }
 .hamburger span { width:2rem; height:0.25rem; background:#ffffff; border-radius:10px; transition:all 0.3s; transform-origin:1px; }
 .hamburger.active span:first-child { transform:rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity:0; }
 .hamburger.active span:nth-child(3) { transform:rotate(-45deg); }
-
-/* Navigation */
 .navigation { background:#1e3a8a; color:#ffffff; box-shadow:0 1px 3px #00000019; }
 .navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; display:none; flex-direction:column; }
 .navigation.open ul { display:flex; }
