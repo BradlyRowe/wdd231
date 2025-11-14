@@ -235,8 +235,8 @@ async function loadMemberSpotlights() {
             throw new Error('No premium members found');
         }
         
-        // Randomly select 2-3 members
-        const spotlightCount = Math.floor(Math.random() * 2) + 2; // 2 or 3
+        // Always select exactly 3 random members
+        const spotlightCount = 3;
         const selectedMembers = getRandomMembers(premiumMembers, spotlightCount);
         
         displaySpotlights(selectedMembers);

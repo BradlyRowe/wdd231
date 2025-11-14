@@ -82,68 +82,86 @@
             </div>
         </section>
 
-        <!-- Main Content Grid -->
-        <div class="home-grid">
-            <!-- Current Events -->
-            <section class="events-section card">
-                <h3 class="title">Current Events</h3>
-                <div class="event">
-                    <h4>Business Networking Breakfast</h4>
-                    <p class="event-date">December 15, 2025 | 7:30 AM</p>
-                    <p>Join fellow business owners for networking and coffee at the Roy City Community Center.</p>
-                </div>
-                <div class="event">
-                    <h4>Holiday Business Showcase</h4>
-                    <p class="event-date">December 20, 2025 | 6:00 PM</p>
-                    <p>Showcase your business during our annual holiday celebration and community gathering.</p>
-                </div>
-                <div class="event">
-                    <h4>New Year Planning Workshop</h4>
-                    <p class="event-date">January 8, 2026 | 10:00 AM</p>
-                    <p>Strategic planning workshop for small businesses. Learn growth strategies for the new year.</p>
-                </div>
-            </section>
+        <!-- Home Section -->
+        <section class="home-section">
+            <div class="section-header">
+                <h2>Home</h2>
+                <p>Stay connected with events, weather, and what's happening in Roy City</p>
+            </div>
+            
+            <div class="home-grid">
+                <!-- Current Events -->
+                <section class="events-section card">
+                    <h3 class="title">Events</h3>
+                    <div class="event">
+                        <h4>Business Networking Breakfast</h4>
+                        <p class="event-date">December 15, 2025 | 7:30 AM</p>
+                        <p>Join fellow business owners for networking and coffee at the Roy City Community Center.</p>
+                    </div>
+                    <div class="event">
+                        <h4>Holiday Business Showcase</h4>
+                        <p class="event-date">December 20, 2025 | 6:00 PM</p>
+                        <p>Showcase your business during our annual holiday celebration and community gathering.</p>
+                    </div>
+                    <div class="event">
+                        <h4>New Year Planning Workshop</h4>
+                        <p class="event-date">January 8, 2026 | 10:00 AM</p>
+                        <p>Strategic planning workshop for small businesses. Learn growth strategies for the new year.</p>
+                    </div>
+                </section>
 
-            <!-- Weather Section -->
-            <section class="weather-section card">
-                <h3 class="title">Current Weather</h3>
-                <div class="weather-current">
-                    <div class="weather-today">
-                        <span class="weather-temp" id="current-temp">Loading...</span>
-                        <span class="weather-desc" id="weather-desc">Loading...</span>
-                        <div id="weather-icon-container" class="weather-icon-container">
-                            <!-- Weather icon will be inserted here by JavaScript -->
+                <!-- Current Weather -->
+                <section class="weather-section card">
+                    <h3 class="title">Current Weather</h3>
+                    <div class="weather-current">
+                        <div class="weather-today">
+                            <span class="weather-temp" id="current-temp">Loading...</span>
+                            <span class="weather-desc" id="weather-desc">Loading...</span>
+                            <div id="weather-icon-container" class="weather-icon-container">
+                                <!-- Weather icon will be inserted here by JavaScript -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="weather-forecast">
-                    <h4>3-Day Forecast</h4>
-                    <div class="forecast-grid" id="forecast-grid">
-                        <div class="forecast-day">
-                            <span class="forecast-label">Tomorrow</span>
-                            <span class="forecast-temp" id="forecast-1">--°</span>
-                        </div>
-                        <div class="forecast-day">
-                            <span class="forecast-label">Day 2</span>
-                            <span class="forecast-temp" id="forecast-2">--°</span>
-                        </div>
-                        <div class="forecast-day">
-                            <span class="forecast-label">Day 3</span>
-                            <span class="forecast-temp" id="forecast-3">--°</span>
+                </section>
+
+                <!-- Weather Forecast -->
+                <section class="weather-forecast-section card">
+                    <h3 class="title">Weather Forecast</h3>
+                    <div class="weather-forecast">
+                        <h4>3-Day Forecast</h4>
+                        <div class="forecast-grid" id="forecast-grid">
+                            <div class="forecast-day">
+                                <span class="forecast-label">Tomorrow</span>
+                                <span class="forecast-temp" id="forecast-1">--°</span>
+                            </div>
+                            <div class="forecast-day">
+                                <span class="forecast-label">Day 2</span>
+                                <span class="forecast-temp" id="forecast-2">--°</span>
+                            </div>
+                            <div class="forecast-day">
+                                <span class="forecast-label">Day 3</span>
+                                <span class="forecast-temp" id="forecast-3">--°</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+        </section>
 
-            <!-- Company Spotlights -->
-            <section class="spotlights-section card">
-                <h3 class="title">Member Spotlights</h3>
+        <!-- Member Spotlights Section -->
+        <section class="member-spotlights-section">
+            <div class="section-header">
+                <h2>Member Spotlights</h2>
+                <p>Discover our featured chamber members and their contributions to the community</p>
+            </div>
+            
+            <div class="spotlights-container card">
                 <div class="spotlights-grid" id="spotlights-container">
                     <!-- Spotlights will be populated by JavaScript -->
                     <div class="loading">Loading member spotlights...</div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
