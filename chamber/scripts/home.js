@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load member spotlights
     loadMemberSpotlights();
+    
+    // Update footer dates
+    updateFooterDates();
 });
 
 // Hamburger menu functionality
@@ -306,5 +309,28 @@ async function fetchWithErrorHandling(url) {
     } catch (error) {
         console.error('Fetch error:', error);
         throw error;
+    }
+}
+
+// Update footer with current year and last modified date
+function updateFooterDates() {
+    // Set current year
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Set last modified date
+    const lastModifiedElement = document.getElementById('last-modified');
+    if (lastModifiedElement) {
+        const lastModified = new Date(document.lastModified);
+        const options = { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        lastModifiedElement.textContent = lastModified.toLocaleDateString('en-US', options);
     }
 }
