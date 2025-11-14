@@ -10,7 +10,7 @@ main { max-width:1200px; margin:0 auto; padding:0 1rem; }
 
 /* Hero */
 .hero { 
-    background: linear-gradient(rgba(30,58,138,0.8), rgba(37,99,235,0.8)), 
+    background: linear-gradient(#1e3a8acc, #2563ebcc), 
                 url('../images/hero.jpg') center/cover; 
     color:#ffffff; 
     padding:4rem 1rem; 
