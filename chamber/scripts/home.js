@@ -1,7 +1,7 @@
 // Roy City Chamber Home Page JavaScript
 
 // API key for OpenWeatherMap - Replace with your actual API key
-const WEATHER_API_KEY = 'YOUR_API_KEY_HERE'; // Get from https://openweathermap.org/api
+const WEATHER_API_KEY = 'YOUR_WORKING_API_KEY_HERE'; // Get from https://openweathermap.org/api
 const ROY_CITY_COORDS = {
     lat: 41.1616,
     lon: -112.0263
@@ -34,8 +34,11 @@ function initializeHamburgerMenu() {
 
 // Weather functionality with real API integration
 async function loadWeatherData() {
+    console.log('Loading weather data...');
+    console.log('API Key:', WEATHER_API_KEY ? 'Set (length: ' + WEATHER_API_KEY.length + ')' : 'Not set');
+    
     // Check if API key is set
-    if (WEATHER_API_KEY === 'YOUR_API_KEY_HERE') {
+    if (WEATHER_API_KEY === 'PASTE_YOUR_API_KEY_HERE' || WEATHER_API_KEY === 'YOUR_API_KEY_HERE' || WEATHER_API_KEY === 'YOUR_WORKING_API_KEY_HERE') {
         console.warn('Weather API key not set. Using placeholder data.');
         displayPlaceholderWeather();
         return;
@@ -44,29 +47,43 @@ async function loadWeatherData() {
     try {
         // Get current weather
         const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${ROY_CITY_COORDS.lat}&lon=${ROY_CITY_COORDS.lon}&appid=${WEATHER_API_KEY}&units=imperial`;
+        console.log('Fetching current weather from:', currentWeatherUrl.replace(WEATHER_API_KEY, 'API_KEY_HIDDEN'));
         const currentResponse = await fetch(currentWeatherUrl);
         
+        console.log('Current weather response status:', currentResponse.status);
         if (!currentResponse.ok) {
             throw new Error(`Current weather API error: ${currentResponse.status}`);
         }
         
         const currentData = await currentResponse.json();
+        console.log('Current weather data received:', currentData.name, currentData.main.temp + '°F');
         
         // Get 5-day forecast
         const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${ROY_CITY_COORDS.lat}&lon=${ROY_CITY_COORDS.lon}&appid=${WEATHER_API_KEY}&units=imperial`;
+        console.log('Fetching forecast from:', forecastUrl.replace(WEATHER_API_KEY, 'API_KEY_HIDDEN'));
         const forecastResponse = await fetch(forecastUrl);
         
+        console.log('Forecast response status:', forecastResponse.status);
         if (!forecastResponse.ok) {
             throw new Error(`Forecast API error: ${forecastResponse.status}`);
         }
         
         const forecastData = await forecastResponse.json();
+        console.log('Forecast data received:', forecastData.list.length, 'forecast items');
         
         // Process and display weather data
         updateWeatherDisplay(currentData, forecastData);
         
     } catch (error) {
         console.error('Error loading weather data:', error);
+        console.error('Error details:', error.message);
+        if (error.message.includes('401')) {
+            console.error('API key is invalid or not activated yet. It can take up to 2 hours for new keys to become active.');
+        } else if (error.message.includes('429')) {
+            console.error('Too many API requests. Please wait a moment and try again.');
+        } else if (error.message.includes('404')) {
+            console.error('Weather API endpoint not found. Check the coordinates or API URL.');
+        }
         displayWeatherError();
     }
 }
@@ -190,12 +207,28 @@ async function loadMemberSpotlights() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         
-        const members = await response.json();
+        const data = await response.json();
+        console.log('Member data loaded:', data);
+        console.log('Data type:', typeof data);
+        console.log('Is array:', Array.isArray(data));
         
-        // Filter for gold and silver members
+        // Handle different JSON structures
+        let members;
+        if (Array.isArray(data)) {
+            members = data;
+        } else if (data.members && Array.isArray(data.members)) {
+            members = data.members;
+        } else {
+            throw new Error('Invalid member data format - expected array or object with members property');
+        }
+        
+        console.log('Members array:', members.length, 'members found');
+        
+        // Filter for gold and silver members (levels 2 and 3)
+        // Level 1 = Bronze, Level 2 = Silver, Level 3 = Gold
         const premiumMembers = members.filter(member => 
             member.membershipLevel && 
-            (member.membershipLevel.toLowerCase() === 'gold' || member.membershipLevel.toLowerCase() === 'silver')
+            (member.membershipLevel === 2 || member.membershipLevel === 3)
         );
         
         if (premiumMembers.length === 0) {
@@ -235,12 +268,16 @@ function createSpotlightCard(member) {
     const card = document.createElement('div');
     card.className = 'spotlight-card';
     
+    // Convert membership level number to text
+    const membershipText = member.membershipLevel === 3 ? 'Gold' : 
+                          member.membershipLevel === 2 ? 'Silver' : 'Bronze';
+    
     card.innerHTML = `
         <div class="spotlight-logo">
             <span style="font-size: 2rem; color: #1e3a8a;">${member.name.charAt(0)}</span>
         </div>
         <h4>${member.name}</h4>
-        <span class="spotlight-level">${member.membershipLevel} Member</span>
+        <span class="spotlight-level">${membershipText} Member</span>
         <div class="spotlight-info">
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Address:</strong> ${member.address}</p>
