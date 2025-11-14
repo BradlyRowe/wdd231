@@ -1,4 +1,15 @@
-/* Roy City Chamber Home Page CSS */
+/* Roy City Chamber Home Page CSS 
+   
+   STANDARDIZED COLOR PALETTE (HEX ONLY):
+   Primary Blue: #1e3a8a, #2563eb, #3b82f6
+   Text: #1f2937, #6b7280
+   Background: #ffffff, #f8fafc
+   Borders: #e5e7eb
+   Accent Brown: #92400e, #b45309
+   Success/Accent Gold: #fbbf24
+   
+   All colors use HEX format for consistency
+*/
 body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
 /* Header override for contrast */
 header, header * { color:#ffffff !important; }

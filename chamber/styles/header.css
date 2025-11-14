@@ -15,7 +15,7 @@ header a, header a:link, header a:visited, header a:hover, header a:active { col
 .desktop-nav a { color:#ffffff !important; text-decoration:none; padding:0.5rem 1rem; border-radius:4px; transition:background 0.3s; }
 .desktop-nav a:hover, .desktop-nav a.active { background:#2563eb !important; }
 
-.hamburger { display:flex; flex-direction:column; width:2rem; height:2rem; background:transparent; border:none; cursor:pointer; color:#ffffff !important; }
+.hamburger { display:flex; flex-direction:column; width:2rem; height:2rem; background:#00000000; border:none; cursor:pointer; color:#ffffff !important; }
 .hamburger span { width:2rem; height:0.25rem; background:#ffffff; }
 
 /* Mobile Navigation */
@@ -25,7 +25,7 @@ header a, header a:link, header a:visited, header a:hover, header a:active { col
 .mobile-nav ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; flex-direction:column; }
 .mobile-nav.open { display:block; }
 .mobile-nav.open ul { display:flex; }
-.mobile-nav a { display:block; padding:1rem; color:#ffffff !important; text-decoration:none; background:transparent !important; }
+.mobile-nav a { display:block; padding:1rem; color:#ffffff !important; text-decoration:none; background:#00000000 !important; }
 .mobile-nav a.active { color:#ffffff !important; background:#2563eb !important; }
 .mobile-nav a:hover { color:#ffffff !important; background:#2563eb !important; }
 
