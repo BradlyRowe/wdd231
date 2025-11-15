@@ -71,8 +71,8 @@ footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
 /* Hero */
 .hero { 
     position:relative;
-    background:#1e3a8a; /* Fallback background for contrast */
-    color:#ffffff; 
+    background:#1e3a8a !important; /* Stronger fallback background for contrast */
+    color:#ffffff !important; 
     padding:4rem 1rem; 
     text-align:center; 
     min-height:400px; 
@@ -106,10 +106,15 @@ footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
     max-width:800px; 
     margin:0 auto; 
     width:100%;
+    color:#ffffff !important;
 }
 .hero h2 { font:700 2.5rem 'Merriweather',serif; margin-bottom:1rem; color:#ffffff !important; }
 .hero p { font-size:1.125rem; margin-bottom:2rem; color:#ffffff !important; }
-.hero, .hero * { color:#ffffff !important; } /* Force white text for contrast */
+.hero, .hero *, .hero h2, .hero p, .hero div, .hero span { color:#ffffff !important; } /* Nuclear color override */
+section.hero { color:#ffffff !important; }
+section.hero * { color:#ffffff !important; }
+section.hero h2 { color:#ffffff !important; }
+section.hero p { color:#ffffff !important; }
 .cta-button { 
     background:#92400e; 
     color:#ffffff; 
@@ -177,4 +182,25 @@ footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
 @media (max-width:767px) {
     .footer-content { grid-template-columns:1fr; text-align:center; }
     .development-info { order:3; }
+}
+
+/* Ultimate Hero Text Color Override - Must be last for highest specificity */
+section.hero,
+section.hero *,
+section.hero h1,
+section.hero h2,
+section.hero h3,
+section.hero p,
+section.hero div,
+section.hero span,
+section.hero a,
+.hero,
+.hero *,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero div,
+.hero span {
+    color:#ffffff !important;
 }
