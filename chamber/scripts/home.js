@@ -1,7 +1,7 @@
 // Roy City Chamber Home Page JavaScript
 
 // API key for OpenWeatherMap - Replace with your actual API key
-const WEATHER_API_KEY = 'YOUR_WORKING_API_KEY_HERE'; // Get from https://openweathermap.org/api
+const WEATHER_API_KEY = '8cf8dd7de6e30691d1a992e4211bed6c'; // Get from https://openweathermap.org/api
 const ROY_CITY_COORDS = {
     lat: 41.1616,
     lon: -112.0263
@@ -40,8 +40,13 @@ async function loadWeatherData() {
     console.log('Loading weather data...');
     console.log('API Key:', WEATHER_API_KEY ? 'Set (length: ' + WEATHER_API_KEY.length + ')' : 'Not set');
     
-    // Check if API key is set
-    if (WEATHER_API_KEY === 'PASTE_YOUR_API_KEY_HERE' || WEATHER_API_KEY === 'YOUR_API_KEY_HERE' || WEATHER_API_KEY === 'YOUR_WORKING_API_KEY_HERE') {
+    // Check if API key is a valid working key (not a placeholder)
+    if (!WEATHER_API_KEY || 
+        WEATHER_API_KEY === 'YOUR_API_KEY_HERE' || 
+        WEATHER_API_KEY === 'YOUR_WORKING_API_KEY_HERE' ||
+        WEATHER_API_KEY === 'PASTE_YOUR_API_KEY_HERE' ||
+        WEATHER_API_KEY.includes('YOUR_') || 
+        WEATHER_API_KEY.includes('PASTE_')) {
         console.warn('Weather API key not set. Using placeholder data.');
         displayPlaceholderWeather();
         return;
