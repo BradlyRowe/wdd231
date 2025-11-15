@@ -116,8 +116,8 @@ section.hero * { color:#ffffff !important; }
 section.hero h2 { color:#ffffff !important; }
 section.hero p { color:#ffffff !important; }
 .cta-button { 
-    background:#92400e; 
-    color:#ffffff; 
+    background:#92400e !important; 
+    color:#ffffff !important; 
     padding:1rem 2rem; 
     text-decoration:none; 
     font-weight:600; 
@@ -128,7 +128,7 @@ section.hero p { color:#ffffff !important; }
     bottom:-2rem;
     right:1rem;
 }
-.cta-button:hover { background:#b45309; }
+.cta-button:hover { background:#b45309 !important; color:#ffffff !important; }
 
 /* Layout */
 .home-section { padding:3rem 1rem; }
@@ -201,6 +201,28 @@ section.hero a,
 .hero h3,
 .hero p,
 .hero div,
-.hero span {
+.hero span,
+.hero a {
+    color:#ffffff !important;
+}
+
+/* CTA Button Color Override */
+.cta-button,
+a.cta-button,
+section.hero .cta-button,
+section.hero a.cta-button,
+.hero .cta-button,
+.hero a.cta-button {
+    background:#92400e !important;
+    color:#ffffff !important;
+}
+
+.cta-button:hover,
+a.cta-button:hover,
+section.hero .cta-button:hover,
+section.hero a.cta-button:hover,
+.hero .cta-button:hover,
+.hero a.cta-button:hover {
+    background:#b45309 !important;
     color:#ffffff !important;
 }
