@@ -1,5 +1,56 @@
 /* Directory CSS */
 body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
+
+/* Header Styles */
+header, header *, header div, header span, header h1, header p, header img, header button { color:#ffffff !important; }
+header { background:#1e3a8a !important; color:#ffffff !important; padding:1rem; }
+header a, header a:link, header a:visited, header a:hover, header a:active { color:#ffffff !important; }
+.header-content { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; color:#ffffff !important; }
+.header-content, .header-content * { color:#ffffff !important; }
+.logo-section { display:flex; align-items:center; gap:1rem; }
+.logo { width:60px; height:60px; background:#ffffff; }
+.site-name h1 { font:700 1.5rem 'Merriweather',serif; margin:0; color:#ffffff !important; }
+.site-name p { color:#ffffff !important; }
+
+/* Desktop Navigation */
+.desktop-nav { display:none; }
+.desktop-nav ul { display:flex; list-style:none; margin:0; padding:0; gap:2rem; }
+.desktop-nav a { color:#ffffff !important; text-decoration:none; padding:0.5rem 1rem; border-radius:4px; transition:background 0.3s; }
+.desktop-nav a:hover, .desktop-nav a.active { background:#2563eb !important; }
+
+.hamburger { display:flex; flex-direction:column; width:2rem; height:2rem; background:#00000000; border:none; cursor:pointer; color:#ffffff !important; }
+.hamburger span { width:2rem; height:0.25rem; background:#ffffff; }
+
+/* Mobile Navigation */
+.mobile-nav { background:#1e3a8a !important; color:#ffffff !important; display:none; }
+.mobile-nav, .mobile-nav * { color:#ffffff !important; }
+.mobile-nav a, .mobile-nav a:link, .mobile-nav a:visited, .mobile-nav a:hover, .mobile-nav a:active { color:#ffffff !important; }
+.mobile-nav ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; flex-direction:column; }
+.mobile-nav.open { display:block; }
+.mobile-nav.open ul { display:flex; }
+.mobile-nav a { display:block; padding:1rem; color:#ffffff !important; text-decoration:none; background:#00000000 !important; }
+.mobile-nav a.active { color:#ffffff !important; background:#2563eb !important; }
+.mobile-nav a:hover { color:#ffffff !important; background:#2563eb !important; }
+
+/* Legacy navigation class support */
+.navigation { background:#1e3a8a !important; color:#ffffff !important; display:none; }
+.navigation.open { display:block; }
+.navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; flex-direction:column; }
+.navigation.open ul { display:flex; }
+.navigation a { display:block; padding:1rem; color:#ffffff !important; text-decoration:none; }
+
+nav, nav * { color:#ffffff !important; }
+nav a, nav a:link, nav a:visited, nav a:hover, nav a:active { color:#ffffff !important; background:#00000000 !important; }
+
+/* Footer Styles */
+footer { background:#1e3a8a; color:#ffffff; padding:2rem 0; margin-top:4rem; }
+.footer-content { max-width:1200px; margin:0 auto; padding:0 1rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; align-items:start; }
+.footer-section h3 { color:#fbbf24; margin-bottom:1rem; }
+.footer-section p,.footer-section a { color:#ffffff; text-decoration:none; margin-bottom:0.5rem; display:block; }
+.footer-section a:hover { color:#fbbf24; }
+.social-icons { display:flex; gap:1rem; }
+.social-icons svg { width:24px; height:24px; }
+
 main { max-width:1200px; margin:0 auto; padding:2rem 1rem; }
 .directory-header h2 { font:700 2.5rem 'Merriweather',serif; color:#1e3a8a; text-align:center; margin-bottom:2rem; }
 .view-toggle { display:flex; background:#f8fafc; padding:0.2rem; margin:1.5rem auto; width:fit-content; }
@@ -11,3 +62,16 @@ main { max-width:1200px; margin:0 auto; padding:2rem 1rem; }
 .member-info { padding:0 0.75rem 0.75rem; }
 .member-info p { color:#6b7280; font-size:0.8rem; }
 .member-website { background:#2563eb; color:#ffffff; padding:0.4rem 0.8rem; text-decoration:none; margin:0 0.75rem 0.75rem; }
+
+/* Header & Footer Responsive */
+@media (min-width:768px) { 
+    .desktop-nav { display:block; }
+    .hamburger { display:none; } 
+    .mobile-nav { display:none !important; }
+    .navigation { display:none !important; }
+    .footer-content { grid-template-columns:2fr 1fr 1.5fr; }
+}
+@media (max-width:767px) {
+    .footer-content { grid-template-columns:1fr; text-align:center; }
+    .development-info { order:3; }
+}
