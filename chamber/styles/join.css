@@ -80,7 +80,7 @@ button[type="submit"]:hover,.btn-primary:hover,.learn-more:hover{background:#256
 .gold-level{border-color:#fbbf24}
 
 /* Modal */
-.modal{display:none;position:fixed;z-index:1000;inset:0;background:#0006}
+.modal{display:none;position:fixed;z-index:1000;inset:0;background:#000a}
 .modal-content{background:#fff;margin:10% auto;padding:2rem;border-radius:8px;width:90%;max-width:500px;position:relative}
 .close{position:absolute;right:1rem;top:1rem;font-size:2rem;font-weight:700;color:#6b7280;cursor:pointer}
 .close:hover{color:#1f2937}
