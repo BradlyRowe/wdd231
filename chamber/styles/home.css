@@ -1,6 +1,5 @@
-/* Roy City Chamber - Optimized Base Styles */
-body{font:1rem/1.6 'Inter',sans-serif;color:#1f2937;background:#fff;margin:0}
-*{box-sizing:border-box}
+/* Roy City Chamber - Main Styles */
+body{font:1rem/1.6 'Inter',sans-serif;color:#1f2937;background:#fff}
 main{max-width:1200px;margin:0 auto;padding:0 1rem}
 
 /* Header & Nav */
