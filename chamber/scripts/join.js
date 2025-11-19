@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update footer dates
     updateFooterDates();
+    
+    // Initialize modal event listeners
+    initializeModalListeners();
 });
 
 // Hamburger menu functionality
@@ -84,6 +87,23 @@ function updateFooterDates() {
     }
 }
 
-// Make functions globally available for inline onclick handlers
-window.openModal = openModal;
-window.closeModal = closeModal;
+// Initialize modal button event listeners
+function initializeModalListeners() {
+    // Learn More buttons
+    const learnMoreButtons = document.querySelectorAll('.learn-more');
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            openModal(modalId);
+        });
+    });
+    
+    // Close buttons
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            closeModal(modalId);
+        });
+    });
+}

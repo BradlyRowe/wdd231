@@ -142,37 +142,37 @@
                     <h4>NP Membership</h4>
                     <p class="level-price">Free</p>
                     <p>For non-profit organizations</p>
-                    <button class="learn-more" onclick="openModal('npModal')">Learn More</button>
+                    <button class="learn-more" data-modal="npModal">Learn More</button>
                 </div>
 
-                <div class="level-card bronze-level">
+                                <div class="level-card bronze-level">
                     <h4>Bronze Membership</h4>
                     <p class="level-price">$200/year</p>
-                    <p>Essential benefits for growing businesses</p>
-                    <button class="learn-more" onclick="openModal('bronzeModal')">Learn More</button>
+                    <p>Ideal for small businesses</p>
+                    <button class="learn-more" data-modal="bronzeModal">Learn More</button>
                 </div>
 
                 <div class="level-card silver-level">
                     <h4>Silver Membership</h4>
                     <p class="level-price">$400/year</p>
-                    <p>Enhanced visibility and networking</p>
-                    <button class="learn-more" onclick="openModal('silverModal')">Learn More</button>
+                    <p>Enhanced visibility & benefits</p>
+                    <button class="learn-more" data-modal="silverModal">Learn More</button>
                 </div>
 
-                <div class="level-card gold-level">
+                                <div class="level-card gold-level">
                     <h4>Gold Membership</h4>
-                    <p class="level-price">$600/year</p>
-                    <p>Premium benefits and spotlight features</p>
-                    <button class="learn-more" onclick="openModal('goldModal')">Learn More</button>
+                    <p class="level-price">$1000/year</p>
+                    <p>Premium benefits & recognition</p>
+                    <button class="learn-more" data-modal="goldModal">Learn More</button>
                 </div>
             </section>
         </div>
     </main>
 
     <!-- Modals -->
-    <div id="npModal" class="modal">
+        <div id="npModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('npModal')">&times;</span>
+            <span class="close" data-modal="npModal">&times;</span>
             <h3>NP Membership Benefits</h3>
             <ul>
                 <li>Free membership for non-profit organizations</li>
@@ -184,9 +184,9 @@
         </div>
     </div>
 
-    <div id="bronzeModal" class="modal">
+                <div id="bronzeModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+            <span class="close" data-modal="bronzeModal">&times;</span>
             <h3>Bronze Membership Benefits</h3>
             <ul>
                 <li>All NP benefits included</li>
@@ -199,9 +199,9 @@
         </div>
     </div>
 
-    <div id="silverModal" class="modal">
+                <div id="silverModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('silverModal')">&times;</span>
+            <span class="close" data-modal="silverModal">&times;</span>
             <h3>Silver Membership Benefits</h3>
             <ul>
                 <li>All Bronze benefits included</li>
@@ -215,9 +215,9 @@
         </div>
     </div>
 
-    <div id="goldModal" class="modal">
+                <div id="goldModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('goldModal')">&times;</span>
+            <span class="close" data-modal="goldModal">&times;</span>
             <h3>Gold Membership Benefits</h3>
             <ul>
                 <li>All Silver benefits included</li>
