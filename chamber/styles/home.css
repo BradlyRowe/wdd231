@@ -1,186 +1,98 @@
-/* Roy City Chamber Home Page CSS 
-   
-   STANDARDIZED COLOR PALETTE (HEX ONLY):
-   Primary Blue: #1e3a8a, #2563eb, #3b82f6
-   Text: #1f2937, #6b7280
-   Background: #ffffff, #f8fafc
-   Borders: #e5e7eb
-   Accent Brown: #92400e, #b45309
-   Success/Accent Gold: #fbbf24
-   
-   All colors use HEX format for consistency
-*/
-body { font:1rem/1.6 'Inter',sans-serif; color:#1f2937; background:#ffffff; }
+/* Roy City Chamber - Optimized Base Styles */
+body{font:1rem/1.6 'Inter',sans-serif;color:#1f2937;background:#fff;margin:0}
+*{box-sizing:border-box}
+main{max-width:1200px;margin:0 auto;padding:0 1rem}
 
-/* Header Styles */
-header, header * { background:#1e3a8a !important; color:#ffffff !important; }
-header { padding:1rem; }
-.header-content { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-.logo-section { display:flex; align-items:center; gap:1rem; }
-.logo { width:60px; height:60px; background:#ffffff; }
-.site-name h1 { font:700 1.5rem 'Merriweather',serif; margin:0; }
+/* Header & Nav */
+header,header *{background:#1e3a8a!important;color:#fff!important}
+header{padding:1rem}
+.header-content,.logo-section{display:flex;align-items:center}
+.header-content{max-width:1200px;margin:0 auto;justify-content:space-between}
+.logo-section{gap:1rem}
+.logo{width:60px;height:60px;background:#fff}
+.site-name h1{font:700 1.5rem 'Merriweather',serif;margin:0}
 
-/* Navigation */
-.desktop-nav { display:none; }
-.desktop-nav ul { display:flex; list-style:none; margin:0; padding:0; gap:2rem; }
-.desktop-nav a { text-decoration:none; padding:0.5rem 1rem; border-radius:4px; transition:background 0.3s; }
-.desktop-nav a:hover, .desktop-nav a.active { background:#2563eb !important; }
+.desktop-nav{display:none}
+.desktop-nav ul{display:flex;list-style:none;margin:0;padding:0;gap:2rem}
+.desktop-nav a{text-decoration:none;padding:.5rem 1rem;border-radius:4px;transition:background .3s}
+.desktop-nav a:hover,.desktop-nav a.active{background:#2563eb!important}
 
-.hamburger { display:flex; flex-direction:column; width:2rem; height:2rem; background:#00000000; border:none; cursor:pointer; }
-.hamburger span { width:2rem; height:0.25rem; background:#ffffff; }
+.hamburger{display:flex;flex-direction:column;width:2rem;height:2rem;background:transparent;border:none;cursor:pointer;gap:.25rem}
+.hamburger span{width:100%;height:.25rem;background:#fff}
 
-.mobile-nav, .navigation { background:#1e3a8a !important; color:#ffffff !important; display:none; }
-.mobile-nav.open, .navigation.open { display:block; }
-.mobile-nav ul, .navigation ul { max-width:1200px; margin:0 auto; padding:0; list-style:none; flex-direction:column; }
-.mobile-nav.open ul, .navigation.open ul { display:flex; }
-.mobile-nav a, .navigation a { display:block; padding:1rem; text-decoration:none; background:#00000000 !important; }
-.mobile-nav a.active, .mobile-nav a:hover { background:#2563eb !important; }
-
-nav, nav * { color:#ffffff !important; }
-
-main { max-width:1200px; margin:0 auto; padding:0 1rem; }
+.mobile-nav,.navigation{background:#1e3a8a!important;color:#fff!important;display:none}
+.mobile-nav.open,.navigation.open{display:block}
+.mobile-nav ul,.navigation ul{max-width:1200px;margin:0 auto;padding:0;list-style:none}
+.mobile-nav.open ul,.navigation.open ul{display:flex;flex-direction:column}
+.mobile-nav a,.navigation a{display:block;padding:1rem;text-decoration:none;background:transparent!important}
+.mobile-nav a.active,.mobile-nav a:hover{background:#2563eb!important}
+nav,nav *{color:#fff!important}
 
 /* Shared */
-.card { background:#ffffff; border:1px solid #e5e7eb; padding:1.5rem; }
-.title { font:700 1.5rem 'Merriweather',serif; color:#1e3a8a; margin-bottom:1rem; }
+.card{background:#fff;border:1px solid #e5e7eb;padding:1.5rem}
+.title{font:700 1.5rem 'Merriweather',serif;color:#1e3a8a;margin-bottom:1rem}
 
 /* Hero */
-.hero { 
-    position:relative;
-    background:#1e3a8a !important; /* Stronger fallback background for contrast */
-    color:#ffffff !important; 
-    padding:4rem 1rem; 
-    text-align:center; 
-    min-height:400px; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; 
-    overflow:hidden;
-}
-.hero-bg-image {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:1;
-}
-.hero::after {
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:linear-gradient(#1e3a8add, #2563ebdd); /* Stronger opacity */
-    z-index:2;
-}
-.hero-content { 
-    position:relative;
-    z-index:3;
-    max-width:800px; 
-    margin:0 auto; 
-    width:100%;
-    color:#ffffff !important;
-}
-.hero, .hero * { color:#ffffff !important; }
-.hero h2 { font:700 2.5rem 'Merriweather',serif; margin-bottom:1rem; }
-.hero p { font-size:1.125rem; margin-bottom:2rem; }
-.cta-button { 
-    background:#92400e !important; 
-    color:#ffffff !important; 
-    padding:1rem 2rem; 
-    text-decoration:none; 
-    font-weight:600; 
-    border-radius:6px; 
-    display:inline-block; 
-    transition:background 0.3s;
-    position:absolute;
-    bottom:-2rem;
-    right:1rem;
-}
-.cta-button:hover { background:#b45309 !important; }
+.hero{position:relative;background:#1e3a8a!important;color:#fff!important;padding:4rem 1rem;text-align:center;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg-image{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(#1e3a8add,#2563ebdd);z-index:2}
+.hero-content{position:relative;z-index:3;max-width:800px;margin:0 auto;width:100%;color:#fff!important}
+.hero,.hero *{color:#fff!important}
+.hero h2{font:700 2.5rem 'Merriweather',serif;margin-bottom:1rem}
+.hero p{font-size:1.125rem;margin-bottom:2rem}
+.cta-button{background:#92400e!important;color:#fff!important;padding:1rem 2rem;text-decoration:none;font-weight:600;border-radius:6px;display:inline-block;transition:background .3s;position:absolute;bottom:-2rem;right:1rem}
+.cta-button:hover{background:#b45309!important}
 
 /* Layout */
-.home-section { padding:3rem 1rem; }
-.section-header { text-align:center; margin-bottom:3rem; }
-.section-header h2 { font:700 2.5rem 'Merriweather',serif; color:#1e3a8a; margin-bottom:0.5rem; }
-.section-header p { font-size:1.125rem; color:#6b7280; max-width:600px; margin:0 auto; }
-
-.home-grid { display:grid; gap:2rem; max-width:1200px; margin:0 auto; }
-.member-spotlights-section { padding:3rem 1rem; background:#f8fafc; }
-.spotlights-container { max-width:1200px; margin:0 auto; }
-
-.events-section,.weather-section,.weather-forecast-section { background:#ffffff; border:1px solid #e5e7eb; padding:1.5rem; }
-
-/* Events */
-.event { margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid #e5e7eb; }
-.event h4 { color:#1e3a8a; }
-.event-date { color:#b45309; font-size:0.875rem; }
-
-/* Weather */
-.weather-today { display:flex; align-items:center; gap:1rem; }
-.weather-temp { font:700 2rem sans-serif; color:#1e3a8a; }
-.forecast-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; }
-.forecast-day { text-align:center; padding:0.75rem; background:#f8fafc; }
-
-/* Spotlights */
-.spotlights-grid { display:grid; gap:1.5rem; }
-.spotlight-card { background:#f8fafc; border:1px solid #e5e7eb; padding:1.5rem; text-align:center; }
-.spotlight-card h4 { color:#1e3a8a; }
-.spotlight-level { background:#92400e; color:#ffffff; padding:0.25rem 0.75rem; font-size:0.75rem; }
-
-/* Responsive */
-@media (min-width:768px) {
-    .home-grid { grid-template-columns:1fr 1fr; }
-    .events-section { grid-column:1 / -1; }
-    .spotlights-grid { grid-template-columns:repeat(2,1fr); }
-}
-@media (min-width:1024px) {
-    .home-grid { grid-template-columns:2fr 1fr 1fr; }
-    .events-section { grid-column:1; }
-    .spotlights-grid { grid-template-columns:repeat(3,1fr); }
-}
-
-/* Header & Footer Responsive */
-@media (min-width:768px) { 
-    .desktop-nav { display:block; }
-    .hamburger { display:none; } 
-    .mobile-nav { display:none !important; }
-    .navigation { display:none !important; }
-    .footer-content { grid-template-columns:2fr 1fr 1.5fr; }
-}
-@media (max-width:767px) {
-    .footer-content { grid-template-columns:1fr; text-align:center; }
-    .development-info { order:3; }
-}
+.home-section,.member-spotlights-section{padding:3rem 1rem}
+.member-spotlights-section{background:#f8fafc}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-header h2{font:700 2.5rem 'Merriweather',serif;color:#1e3a8a;margin-bottom:.5rem}
+.section-header p{font-size:1.125rem;color:#6b7280;max-width:600px;margin:0 auto}
+.home-grid,.spotlights-container{max-width:1200px;margin:0 auto}
+.home-grid{display:grid;gap:2rem}
+.events-section,.weather-section,.weather-forecast-section{background:#fff;border:1px solid #e5e7eb;padding:1.5rem}
+.event{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #e5e7eb}
+.event h4,.spotlight-card h4{color:#1e3a8a}
+.event-date{color:#b45309;font-size:.875rem}
+.weather-today{display:flex;align-items:center;gap:1rem}
+.weather-temp{font:700 2rem sans-serif;color:#1e3a8a}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.forecast-day,.spotlight-card{text-align:center;padding:1.5rem;background:#f8fafc}
+.forecast-day{padding:.75rem}
+.spotlights-grid{display:grid;gap:1.5rem}
+.spotlight-card{border:1px solid #e5e7eb}
+.spotlight-level{background:#92400e;color:#fff;padding:.25rem .75rem;font-size:.75rem}
 
 /* Footer */
-footer { 
-    background:#0f172a; 
-    color:#e2e8f0; 
-    padding:3rem 2rem 1rem; 
+footer{background:#0f172a;color:#e2e8f0;padding:3rem 2rem 1rem}
+.footer-content{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start;max-width:1200px;margin:0 auto}
+footer .footer-section h3{color:#22d3ee;font-size:1.125rem;margin-bottom:1rem}
+footer p{color:#cbd5e1;margin-bottom:.5rem;font-size:.875rem}
+footer a{color:#cbd5e1;text-decoration:none}
+footer a:hover{color:#22d3ee}
+footer address{font-style:normal}
+footer .footer-bottom{grid-column:1/-1;text-align:center;margin-top:1rem}
+.social-icons{display:flex;gap:1rem;margin-top:.5rem}
+.social-icons a{color:#cbd5e1;transition:color .3s}
+.social-icons a:hover{color:#22d3ee}
+.social-icons svg{width:24px;height:24px}
+
+/* Responsive */
+@media (min-width:768px){
+.home-grid{grid-template-columns:1fr 1fr}
+.events-section{grid-column:1/-1}
+.spotlights-grid{grid-template-columns:repeat(2,1fr)}
+.desktop-nav{display:block}
+.hamburger,.mobile-nav,.navigation{display:none!important}
+.footer-content{grid-template-columns:2fr 1fr 1.5fr}
 }
-.footer-content { 
-    display:grid; 
-    grid-template-columns:1fr 1fr 1fr; 
-    gap:2rem; 
-    align-items:start; 
-    max-width:1200px;
-    margin:0 auto;
+@media (min-width:1024px){
+.home-grid{grid-template-columns:2fr 1fr 1fr}
+.events-section{grid-column:1}
+.spotlights-grid{grid-template-columns:repeat(3,1fr)}
 }
-footer .footer-section h3 { 
-    color:#22d3ee; 
-    font-size:1.125rem; 
-    margin-bottom:1rem; 
+@media (max-width:767px){
+.footer-content{grid-template-columns:1fr;text-align:center}
+.development-info{order:3}
 }
-footer p { color:#cbd5e1; margin-bottom:0.5rem; font-size:0.875rem; }
-footer a { color:#cbd5e1; text-decoration:none; }
-footer a:hover { color:#22d3ee; }
-footer address { font-style:normal; }
-footer .footer-bottom { grid-column:1/-1; text-align:center; margin-top:1rem; }
-.social-icons { display:flex; gap:1rem; margin-top:0.5rem; }
-.social-icons a { color:#cbd5e1; transition:color 0.3s; }
-.social-icons a:hover { color:#22d3ee; }
-.social-icons svg { width:24px; height:24px; }
