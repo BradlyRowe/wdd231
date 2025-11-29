@@ -55,7 +55,7 @@ footer address{font-style:normal}
 /* POI Grid with named areas */
 .poi-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:1100px;margin:0 auto 3rem}
 
-.poi-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1rem;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.poi-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1rem;box-shadow:0 1px 3px #0000001a}
 .poi-card h2{font:700 1.25rem 'Merriweather',serif;color:#1e3a8a;margin:0 0 .75rem}
 .poi-card figure{margin:0 0 .75rem}
 .poi-card img{width:100%;height:auto;border-radius:6px;display:block}
