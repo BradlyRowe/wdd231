@@ -4,28 +4,28 @@ export const points = [
     title: 'Roy Aquatic Center',
     address: '2977 W 5200 S, Roy, UT 84067',
     description: 'Seasonal outdoor pool with slides and family splash features. Popular summer destination.',
-    image: 'https://images.unsplash.com/photo-1565289613356-186d465259c0?w=300&h=200&fit=crop&auto=format&q=80'
+    image: 'https://images.unsplash.com/photo-1576610611537-76a81e2b3d6d?w=300&h=200&fit=crop'
   },
   {
     id: 'c2',
     title: 'Sand Ridge Park',
     address: '5700 S 3000 W, Roy, UT 84067',
     description: 'Community park with sports fields, walking paths, and picnic pavilions.',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=300&h=200&fit=crop&auto=format&q=80'
+    image: 'https://images.unsplash.com/photo-1552502864-79ee09f7b83b?w=300&h=200&fit=crop'
   },
   {
     id: 'c3',
     title: 'Hill Aerospace Museum',
     address: '7961 Wardleigh Rd, Hill AFB, UT 84056',
     description: 'Free museum featuring historic aircraft and exhibits from the USAF.',
-    image: 'https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=300&h=200&fit=crop&auto=format&q=80'
+    image: 'https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=300&h=200&fit=crop'
   },
   {
     id: 'c4',
     title: 'Roy Historical Museum',
     address: '5555 S 3500 W, Roy, UT 84067',
     description: 'Local museum preserving Roy City history with rotating exhibits.',
-    image: 'https://images.unsplash.com/photo-1564399579883-451a5d44ec06?w=300&h=200&fit=crop&auto=format&q=80'
+    image: 'https://images.unsplash.com/photo-1578926314433-c6302a1fb331?w=300&h=200&fit=crop'
   },
   {
     id: 'c5',
