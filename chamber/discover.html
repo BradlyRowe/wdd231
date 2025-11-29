@@ -106,12 +106,6 @@
     </footer>
 
     <script type="module" src="scripts/discover.js"></script>
-    <script>
-        const nav = document.getElementById('navigation');
-        const btn = document.getElementById('hamburger');
-        if (btn) btn.addEventListener('click', () => nav.classList.toggle('open'));
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
+    <script src="scripts/init.js"></script>
 </body>
 </html>
