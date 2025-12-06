@@ -10,13 +10,14 @@
     --border-dark: #333;
     --cell-bg: #fff;
     --cell-hover: #e0e0e0;
-    --accent-green: #8B0000;
-    --accent-green-dark: #660000;
-    --accent-green-hover: #a00000;
+    --accent-green: #DC143C;
+    --accent-green-dark: #B22222;
+    --accent-green-hover: #FF1744;
     --accent-red: #f44336;
     --accent-red-hover: #da190b;
-    --shadow-green: rgba(139, 0, 0, 0.5);
+    --shadow-green: rgba(220, 20, 60, 0.5);
     --shadow-dark: rgba(0, 0, 0, 0.3);
+    --border-color: #666;
     
     /* Dungeon tile colors */
     --tile-floor-dark: #5a5a4a;
@@ -42,6 +43,7 @@
 body {
     font-family: 'Roboto Serif', serif;
     background-color: var(--bg-dark);
+    color: var(--text-light);
     padding: 10px;
     overflow: hidden;
     height: 100vh;
