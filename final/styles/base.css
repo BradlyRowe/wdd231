@@ -10,12 +10,12 @@
     --border-dark: #333;
     --cell-bg: #fff;
     --cell-hover: #e0e0e0;
-    --accent-green: #FF9999;
-    --accent-green-dark: #FF7F7F;
-    --accent-green-hover: #FFB3B3;
+    --accent-green: #FFB3B3;
+    --accent-green-dark: #FF9999;
+    --accent-green-hover: #FFCCCC;
     --accent-red: #f44336;
     --accent-red-hover: #da190b;
-    --shadow-green: rgba(255, 153, 153, 0.5);
+    --shadow-green: rgba(255, 179, 179, 0.5);
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --border-color: #666;
     
