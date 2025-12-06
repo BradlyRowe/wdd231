@@ -481,6 +481,10 @@ button:focus {
     border-radius: 8px;
 }
 
+.api-lookup.hidden {
+    display: none;
+}
+
 .api-lookup h4 {
     color: var(--accent-green);
     margin-bottom: 10px;
