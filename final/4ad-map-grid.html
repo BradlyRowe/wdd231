@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive dungeon mapping grid for Four Against Darkness - create and track your dungeon exploration with a 30x20 tile grid.">
+    <meta name="author" content="Brad Rowe">
+    <title>4AD Map Grid</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="4ad-map-grid.html" class="active">Map Grid</a></li>
+            <li><a href="characters.html">Characters</a></li>
+        </ul>
+    </nav>
+    <div class="tile-library">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <h3>Dungeon Tiles (Click to select)</h3>
+            <button class="nav-link" onclick="toggleAPILookup()" aria-label="Toggle reference lookup">📚 References</button>
+        </div>
+        <div class="tile-options" id="tile-options">
+            <!-- Tiles will be loaded dynamically from tiles.js -->
+            <button class="clear" onclick="clearGrid()">Clear All Grid</button>
+        </div>
+        <div id="api-lookup" class="api-lookup" style="display: none;">
+            <h4>D&D 5e Reference Lookup</h4>
+            <div class="api-controls">
+                <input type="text" id="lookup-search" placeholder="Search monsters or spells..." list="reference-list" aria-label="Search for monsters or spells">
+                <datalist id="reference-list"></datalist>
+                <button onclick="lookupReference()" class="api-button">Search</button>
+            </div>
+            <div id="api-results" class="api-results"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="character-panel">
+            <h3>Character Tracking</h3>
+            <div class="character-cards">
+                <div class="character-card">
+                    <div class="card-header">
+                        <input type="text" class="character-name" placeholder="Character Name">
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-row">
+                            <label>Class:</label>
+                            <input type="text" class="class-input" placeholder="Class">
+                        </div>
+                        <div class="stat-row">
+                            <label>Level:</label>
+                            <input type="number" class="stat-input" placeholder="1">
+                        </div>
+                        <div class="stat-row">
+                            <label>HP:</label>
+                            <input type="number" class="stat-input" placeholder="0">
+                            <span>/</span>
+                            <input type="number" class="stat-input" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="card-header">
+                        <input type="text" class="character-name" placeholder="Character Name">
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-row">
+                            <label>Class:</label>
+                            <input type="text" class="class-input" placeholder="Class">
+                        </div>
+                        <div class="stat-row">
+                            <label>Level:</label>
+                            <input type="number" class="stat-input" placeholder="1">
+                        </div>
+                        <div class="stat-row">
+                            <label>HP:</label>
+                            <input type="number" class="stat-input" placeholder="0">
+                            <span>/</span>
+                            <input type="number" class="stat-input" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="card-header">
+                        <input type="text" class="character-name" placeholder="Character Name">
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-row">
+                            <label>Class:</label>
+                            <input type="text" class="class-input" placeholder="Class">
+                        </div>
+                        <div class="stat-row">
+                            <label>Level:</label>
+                            <input type="number" class="stat-input" placeholder="1">
+                        </div>
+                        <div class="stat-row">
+                            <label>HP:</label>
+                            <input type="number" class="stat-input" placeholder="0">
+                            <span>/</span>
+                            <input type="number" class="stat-input" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="card-header">
+                        <input type="text" class="character-name" placeholder="Character Name">
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-row">
+                            <label>Class:</label>
+                            <input type="text" class="class-input" placeholder="Class">
+                        </div>
+                        <div class="stat-row">
+                            <label>Level:</label>
+                            <input type="number" class="stat-input" placeholder="1">
+                        </div>
+                        <div class="stat-row">
+                            <label>HP:</label>
+                            <input type="number" class="stat-input" placeholder="0">
+                            <span>/</span>
+                            <input type="number" class="stat-input" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Four Against Darkness Companion | Brad Rowe</p>
+            <p class="footer-note">A digital tool for enhancing your 4AD tabletop experience</p>
+        </div>
+    </footer>
+    <script src="scripts/tiles.js"></script>
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/nav.js"></script>
+</body>
+</html>

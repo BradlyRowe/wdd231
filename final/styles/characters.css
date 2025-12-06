@@ -1,0 +1,108 @@
+.page-header {
+    background-color: var(--bg-darker);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header h1 {
+    color: var(--accent-green);
+    margin: 0;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--accent-green);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: var(--accent-green-hover);
+}
+
+.character-management {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.character-form-card {
+    background-color: var(--bg-darker);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--border-light);
+}
+
+.character-form-card h2 {
+    color: var(--accent-green);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-light);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--bg-input);
+    color: var(--text-light);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.hp-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hp-group label {
+    flex-shrink: 0;
+    min-width: 100px;
+}
+
+.hp-group input {
+    width: auto;
+    flex: 1;
+}
+
+.hp-group span {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+}

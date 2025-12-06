@@ -1,0 +1,183 @@
+/* Landing Page Specific Styles */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--tile-wall-dark) 0%, var(--tile-floor-dark) 100%);
+    color: var(--text-light);
+    padding: clamp(1rem, 3vh, 2rem) 1rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-green);
+}
+
+.header-content h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent-green);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.tagline {
+    margin: 0;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: clamp(1rem, 3vh, 2rem) 1rem;
+    background-color: var(--bg-dark);
+    width: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    max-width: min(800px, 90vw);
+    max-height: min(400px, 30vh);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+    margin-bottom: clamp(1.5rem, 4vh, 3rem);
+    flex-shrink: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: min(400px, 30vh);
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Features Section */
+.features-section {
+    width: 100%;
+    max-width: min(900px, 95vw);
+    box-sizing: border-box;
+}
+
+.features-section h2 {
+    text-align: center;
+    color: var(--accent-green);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: clamp(1rem, 3vh, 2rem);
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 3vh, 2rem);
+    padding: 0 1rem;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, var(--tile-floor-dark) 0%, var(--tile-wall-dark) 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: clamp(1rem, 3vh, 2rem);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    text-decoration: none;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-green);
+}
+
+.card-icon {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(0.5rem, 2vh, 1rem);
+}
+
+.feature-card h3 {
+    color: var(--accent-green);
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    margin: 0 0 clamp(0.5rem, 2vh, 1rem) 0;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    margin: 0 0 clamp(0.75rem, 2vh, 1.5rem) 0;
+    line-height: 1.6;
+    flex: 1;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+}
+
+.card-button {
+    background-color: var(--accent-green);
+    color: var(--text-light);
+    padding: clamp(0.5rem, 1.5vh, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    transition: background-color 0.2s;
+}
+
+.feature-card:hover .card-button {
+    background-color: var(--accent-green-hover);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--tile-wall-dark);
+    color: var(--text-light);
+    padding: clamp(1rem, 2vh, 1.5rem) 1rem;
+    text-align: center;
+    border-top: 3px solid var(--accent-green);
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+}
+
+.footer-note {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-cards {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .hero-section {
+        max-height: 25vh;
+    }
+    
+    .hero-image {
+        max-height: 25vh;
+    }
+}

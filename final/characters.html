@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Character Management for Four Against Darkness - Create and manage your party of adventurers with detailed character sheets.">
+    <meta name="author" content="Brad Rowe">
+    <title>Character Management - 4AD Companion</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/characters.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="4ad-map-grid.html">Map Grid</a></li>
+            <li><a href="characters.html" class="active">Characters</a></li>
+        </ul>
+    </nav>
+    <div class="page-header">
+        <h1>Character Management</h1>
+        <a href="4ad-map-grid.html" class="nav-link">Back to Grid</a>
+    </div>
+
+    <div class="character-management">
+        <div class="character-form-card">
+            <h2>Character 1</h2>
+            <div class="form-group">
+                <label for="char1-name">Character Name:</label>
+                <input type="text" id="char1-name" placeholder="Enter character name" aria-label="Character 1 name" required>
+                <span class="error-message" id="char1-name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char1-class">Class:</label>
+                <input type="text" id="char1-class" placeholder="Enter class" aria-label="Character 1 class" required>
+                <span class="error-message" id="char1-class-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char1-level">Level:</label>
+                <input type="number" id="char1-level" placeholder="1" min="1" max="20" aria-label="Character 1 level" required>
+                <span class="error-message" id="char1-level-error"></span>
+            </div>
+            <div class="form-group hp-group">
+                <label for="char1-hp">Hit Points:</label>
+                <input type="number" id="char1-hp" placeholder="Current HP" min="0" aria-label="Character 1 current HP" required>
+                <span>/</span>
+                <input type="number" id="char1-maxhp" placeholder="Max HP" min="1" aria-label="Character 1 max HP" required>
+                <span class="error-message" id="char1-hp-error"></span>
+            </div>
+            <div class="form-group">
+                <label>Armor Class:</label>
+                <input type="number" id="char1-armor" placeholder="AC" min="1">
+            </div>
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea id="char1-notes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="character-form-card">
+            <h2>Character 2</h2>
+            <div class="form-group">
+                <label for="char2-name">Character Name:</label>
+                <input type="text" id="char2-name" placeholder="Enter character name" aria-label="Character 2 name">
+                <span class="error-message" id="char2-name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char2-class">Class:</label>
+                <input type="text" id="char2-class" placeholder="Enter class" aria-label="Character 2 class">
+                <span class="error-message" id="char2-class-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char2-level">Level:</label>
+                <input type="number" id="char2-level" placeholder="1" min="1" max="20" aria-label="Character 2 level">
+                <span class="error-message" id="char2-level-error"></span>
+            </div>
+            <div class="form-group hp-group">
+                <label for="char2-hp">Hit Points:</label>
+                <input type="number" id="char2-hp" placeholder="Current HP" min="0" aria-label="Character 2 current HP">
+                <span>/</span>
+                <input type="number" id="char2-maxhp" placeholder="Max HP" min="1" aria-label="Character 2 max HP">
+                <span class="error-message" id="char2-hp-error"></span>
+            </div>
+            <div class="form-group">
+                <label>Armor Class:</label>
+                <input type="number" id="char2-armor" placeholder="AC" min="1">
+            </div>
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea id="char2-notes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="character-form-card">
+            <h2>Character 3</h2>
+            <div class="form-group">
+                <label for="char3-name">Character Name:</label>
+                <input type="text" id="char3-name" placeholder="Enter character name" aria-label="Character 3 name">
+                <span class="error-message" id="char3-name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char3-class">Class:</label>
+                <input type="text" id="char3-class" placeholder="Enter class" aria-label="Character 3 class">
+                <span class="error-message" id="char3-class-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char3-level">Level:</label>
+                <input type="number" id="char3-level" placeholder="1" min="1" max="20" aria-label="Character 3 level">
+                <span class="error-message" id="char3-level-error"></span>
+            </div>
+            <div class="form-group hp-group">
+                <label for="char3-hp">Hit Points:</label>
+                <input type="number" id="char3-hp" placeholder="Current HP" min="0" aria-label="Character 3 current HP">
+                <span>/</span>
+                <input type="number" id="char3-maxhp" placeholder="Max HP" min="1" aria-label="Character 3 max HP">
+                <span class="error-message" id="char3-hp-error"></span>
+            </div>
+            <div class="form-group">
+                <label>Armor Class:</label>
+                <input type="number" id="char3-armor" placeholder="AC" min="1">
+            </div>
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea id="char3-notes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="character-form-card">
+            <h2>Character 4</h2>
+            <div class="form-group">
+                <label for="char4-name">Character Name:</label>
+                <input type="text" id="char4-name" placeholder="Enter character name" aria-label="Character 4 name">
+                <span class="error-message" id="char4-name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char4-class">Class:</label>
+                <input type="text" id="char4-class" placeholder="Enter class" aria-label="Character 4 class">
+                <span class="error-message" id="char4-class-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="char4-level">Level:</label>
+                <input type="number" id="char4-level" placeholder="1" min="1" max="20" aria-label="Character 4 level">
+                <span class="error-message" id="char4-level-error"></span>
+            </div>
+            <div class="form-group hp-group">
+                <label for="char4-hp">Hit Points:</label>
+                <input type="number" id="char4-hp" placeholder="Current HP" min="0" aria-label="Character 4 current HP">
+                <span>/</span>
+                <input type="number" id="char4-maxhp" placeholder="Max HP" min="1" aria-label="Character 4 max HP">
+                <span class="error-message" id="char4-hp-error"></span>
+            </div>
+            <div class="form-group">
+                <label>Armor Class:</label>
+                <input type="number" id="char4-armor" placeholder="AC" min="1">
+            </div>
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea id="char4-notes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Four Against Darkness Companion | Brad Rowe</p>
+            <p class="footer-note">A digital tool for enhancing your 4AD tabletop experience</p>
+        </div>
+    </footer>
+    <script src="scripts/characters.js"></script>
+    <script src="scripts/nav.js"></script>
+</body>
+</html>

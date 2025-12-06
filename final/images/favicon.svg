@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .dungeon-bg { fill: #1a1a1a; }
+      .wall { fill: #3a3a3a; stroke: #5a5a4a; stroke-width: 2; }
+      .accent { fill: #4ade80; }
+      .text { fill: #e5e5e5; font-family: Arial, sans-serif; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="dungeon-bg" width="64" height="64" rx="8"/>
+  
+  <!-- Grid pattern -->
+  <rect class="wall" x="8" y="8" width="48" height="48" rx="2"/>
+  <line x1="20" y1="8" x2="20" y2="56" stroke="#5a5a4a" stroke-width="1"/>
+  <line x1="32" y1="8" x2="32" y2="56" stroke="#5a5a4a" stroke-width="1"/>
+  <line x1="44" y1="8" x2="44" y2="56" stroke="#5a5a4a" stroke-width="1"/>
+  <line x1="8" y1="20" x2="56" y2="20" stroke="#5a5a4a" stroke-width="1"/>
+  <line x1="8" y1="32" x2="56" y2="32" stroke="#5a5a4a" stroke-width="1"/>
+  <line x1="8" y1="44" x2="56" y2="44" stroke="#5a5a4a" stroke-width="1"/>
+  
+  <!-- 4AD Text -->
+  <text class="text accent" x="32" y="37" font-size="16" text-anchor="middle">4AD</text>
+</svg>
