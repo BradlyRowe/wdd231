@@ -414,6 +414,14 @@ button:focus {
     overflow-y: auto;
 }
 
+.tile-library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tile-library h2,
 .tile-library h3 {
     margin: 0;
     color: var(--accent-green);

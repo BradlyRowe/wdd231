@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    
-    <header class="header">
-        <div class="header-content">
-            <h1>Four Against Darkness (4AD)</h1>
-            <p class="tagline">Your Digital Companion for Dungeon Exploration</p>
-        </div>
-    </header>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Interactive dungeon mapping grid for Four Against Darkness - create and track your dungeon exploration with a 30x20 tile grid.">
@@ -48,26 +41,30 @@
         </ul>
     </nav>
     
+    <header class="visually-hidden">
+        <h1>4AD Dungeon Map Grid</h1>
+    </header>
+    
     <main>
         <div class="tile-library">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <h3>Dungeon Tiles (Click to select)</h3>
-            <button class="nav-link" onclick="toggleAPILookup()" aria-label="Toggle reference lookup">📚 References</button>
-        </div>
-        <div class="tile-options" id="tile-options">
-            <!-- Tiles will be loaded dynamically from tiles.js -->
-            <button class="clear" onclick="clearGrid()">Clear All Grid</button>
-        </div>
-        <div id="api-lookup" class="api-lookup" style="display: none;">
-            <h4>D&D 5e Reference Lookup</h4>
-            <div class="api-controls">
-                <input type="text" id="lookup-search" placeholder="Search monsters or spells..." list="reference-list" aria-label="Search for monsters or spells">
-                <datalist id="reference-list"></datalist>
-                <button onclick="lookupReference()" class="api-button">Search</button>
+            <div class="tile-library-header">
+                <h2>Dungeon Tiles (Click to select)</h2>
+                <button class="nav-link" id="toggle-api-btn" aria-label="Toggle reference lookup">📚 References</button>
             </div>
-            <div id="api-results" class="api-results"></div>
+            <div class="tile-options" id="tile-options">
+                <!-- Tiles will be loaded dynamically from tiles.js -->
+                <button class="clear" id="clear-grid-btn">Clear All Grid</button>
+            </div>
+            <div id="api-lookup" class="api-lookup" style="display: none;">
+                <h3>D&D 5e Reference Lookup</h3>
+                <div class="api-controls">
+                    <input type="text" id="lookup-search" placeholder="Search monsters or spells..." list="reference-list" aria-label="Search for monsters or spells">
+                    <datalist id="reference-list"></datalist>
+                    <button id="lookup-btn" class="api-button">Search</button>
+                </div>
+                <div id="api-results" class="api-results"></div>
+            </div>
         </div>
-    </div>
 
     <div class="main-content">
         <div class="container">

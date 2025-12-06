@@ -391,6 +391,27 @@ function displaySpellInfo(spell) {
     return info;
 }
 
+// Add event listeners for buttons
+document.addEventListener('DOMContentLoaded', () => {
+    // Clear grid button
+    const clearGridBtn = document.getElementById('clear-grid-btn');
+    if (clearGridBtn) {
+        clearGridBtn.addEventListener('click', clearGrid);
+    }
+    
+    // Toggle API lookup button
+    const toggleApiBtn = document.getElementById('toggle-api-btn');
+    if (toggleApiBtn) {
+        toggleApiBtn.addEventListener('click', toggleAPILookup);
+    }
+    
+    // Lookup reference button
+    const lookupBtn = document.getElementById('lookup-btn');
+    if (lookupBtn) {
+        lookupBtn.addEventListener('click', lookupReference);
+    }
+});
+
 // Initialize on page load
 loadTiles();
 initGrid();
