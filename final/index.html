@@ -6,7 +6,21 @@
     <meta name="description" content="Four Against Darkness Web Companion - A digital tool for mapping dungeons, managing characters, and enhancing your 4AD tabletop RPG experience.">
     <meta name="author" content="Brad Rowe">
     <meta name="keywords" content="Four Against Darkness, 4AD, dungeon crawler, RPG, tabletop game, character management, dungeon mapping">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Four Against Darkness (4AD) Companion">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/4ad_default.jpg">
+    <meta property="og:url" content="https://bradlyrowe.github.io/wdd231/final/">
+    <meta property="og:description" content="Digital companion for Four Against Darkness tabletop RPG">
+    
     <title>Four Against Darkness (4AD) Companion</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Roboto+Serif:wght@400;500&family=Special+Elite&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/landing.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -22,6 +36,7 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="4ad-map-grid.html">Map Grid</a></li>
             <li><a href="characters.html">Characters</a></li>
+            <li><a href="siteplan.html">Site Plan</a></li>
         </ul>
     </nav>
     <header class="header">
@@ -33,10 +48,15 @@
 
     <main class="main-content">
         <div class="hero-section">
-            <img src="images/hero-dungeon.svg" alt="Fantasy dungeon entrance with torch-lit corridors and stone archways" class="hero-image" loading="lazy">
+            <img src="images/4ad_default.jpg" alt="Four Against Darkness game scene with adventurers exploring a dungeon" class="hero-image" loading="lazy">
         </div>
 
-        <div class="features-section">
+        <section class="about-section">
+            <h2>What is Four Against Darkness?</h2>
+            <p>Four Against Darkness is a solo dungeon-delving pen-and-paper game where you control a party of adventurers exploring dangerous dungeons, fighting monsters, and collecting treasure. This web companion streamlines your gameplay by providing digital tools for mapping and character management.</p>
+        </section>
+
+        <section class="features-section">
             <h2>Explore Your Adventure</h2>
             <div class="feature-cards">
                 <a href="4ad-map-grid.html" class="feature-card">
@@ -53,15 +73,28 @@
                     <span class="card-button">Manage Characters</span>
                 </a>
             </div>
-        </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Begin Your Quest?</h2>
+            <p>Start mapping your dungeon or create your party of heroes.</p>
+            <div class="cta-buttons">
+                <a href="4ad-map-grid.html" class="btn btn-primary">Start Mapping</a>
+                <a href="characters.html" class="btn btn-secondary">Create Characters</a>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Four Against Darkness Companion | Brad Rowe</p>
+            <p>&copy; <span id="currentYear"></span> Four Against Darkness Companion | Brad Rowe</p>
             <p class="footer-note">A digital tool for enhancing your 4AD tabletop experience</p>
+            <p class="footer-modified">Last Modified: <span id="lastModified"></span></p>
+            <p><a href="siteplan.html" class="footer-link">View Site Plan</a></p>
         </div>
     </footer>
+    
     <script src="scripts/nav.js"></script>
+    <script src="scripts/footer.js"></script>
 </body>
 </html>

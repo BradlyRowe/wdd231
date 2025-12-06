@@ -48,20 +48,51 @@ body {
 /* Hero Section */
 .hero-section {
     width: 100%;
-    max-width: min(800px, 90vw);
-    max-height: min(400px, 30vh);
+    max-width: min(1200px, 90vw);
+    max-height: min(600px, 50vh);
     margin-top: clamp(1rem, 2vh, 1.5rem);
     margin-bottom: clamp(1.5rem, 4vh, 3rem);
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    max-height: min(400px, 30vh);
-    object-fit: contain;
+    max-height: min(600px, 50vh);
+    object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+/* About Section */
+.about-section {
+    width: 100%;
+    max-width: min(900px, 95vw);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--tile-floor-dark);
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.about-section h2 {
+    text-align: center;
+    color: var(--accent-green);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.about-section p {
+    font-family: 'Roboto Serif', serif;
+    line-height: 1.8;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: var(--text-light);
+    text-align: center;
 }
 
 /* Features Section */
@@ -69,6 +100,7 @@ body {
     width: 100%;
     max-width: min(900px, 95vw);
     box-sizing: border-box;
+    margin: 2rem auto;
 }
 
 .features-section h2 {
@@ -140,6 +172,74 @@ body {
     background-color: var(--accent-green-hover);
 }
 
+/* CTA Section */
+.cta-section {
+    width: 100%;
+    max-width: min(900px, 95vw);
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--tile-floor-dark) 0%, var(--tile-wall-dark) 100%);
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.cta-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--accent-green);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--text-light);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-family: 'Roboto Serif', serif;
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: var(--text-light);
+    border: 2px solid var(--accent-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-green-hover);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
 /* Footer */
 .footer {
     background-color: var(--tile-wall-dark);
@@ -157,6 +257,23 @@ body {
 .footer-note {
     font-size: clamp(0.75rem, 1.3vw, 0.9rem);
     opacity: 0.8;
+}
+
+.footer-modified {
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+}
+
+.footer-link {
+    color: var(--text-light);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
 }
 
 /* Responsive Design */
