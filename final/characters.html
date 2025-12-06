@@ -38,17 +38,16 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="4ad-map-grid.html">Map Grid</a></li>
             <li><a href="characters.html" class="active">Characters</a></li>
+            <li><a href="siteplan.html">Site Plan</a></li>
         </ul>
     </nav>
-    <header class="header">
-        <div class="header-content">
-            <p class="tagline">Your Digital Companion for Dungeon Exploration</p>
-        </div>
+    <header class="visually-hidden">
+        <h1>Character Management - 4AD Companion</h1>
     </header>
     
     <main>
         <div class="page-header">
-            <h1>Character Management</h1>
+            <h2>Character Management</h2>
             <a href="4ad-map-grid.html" class="nav-link">Back to Grid</a>
         </div>
 
@@ -193,9 +192,13 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Four Against Darkness Companion | Brad Rowe</p>
+            <p>&copy; <span id="currentYear"></span> Four Against Darkness Companion | Brad Rowe</p>
             <p class="footer-note">A digital tool for enhancing your 4AD tabletop experience</p>
+            <p class="footer-modified">Last Modified: <span id="lastModified"></span></p>
+            <p><a href="siteplan.html" class="footer-link">View Site Plan</a></p>
         </div>
     </footer>
+    
+    <script src="scripts/footer.js" defer></script>
 </body>
 </html>
