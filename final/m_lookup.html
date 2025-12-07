@@ -48,14 +48,19 @@
     
     <main>
         <div class="page-header">
-            <h2>D&D 5e Monster Lookup</h2>
+            <h2>D&D 5e Monster Reference</h2>
             <a href="4ad-map-grid.html" class="nav-link">Back to Grid</a>
         </div>
 
         <section class="api-lookup" id="api-lookup">
-            <p class="api-description">Search for D&D 5th Edition monsters to reference during your Four Against Darkness adventures.</p>
+            <p class="api-description">Browse D&D 5th Edition monsters to reference during your Four Against Darkness adventures.</p>
             
-            <div class="api-search">
+            <div class="api-controls">
+                <button id="load-monsters-btn" class="search-button">Load Random Monsters</button>
+                <button id="search-toggle-btn" class="search-button secondary">Search Specific Monster</button>
+            </div>
+
+            <div class="api-search hidden" id="search-section">
                 <input 
                     type="text" 
                     id="monster-search" 

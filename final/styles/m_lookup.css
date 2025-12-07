@@ -53,6 +53,14 @@
     text-align: center;
 }
 
+.api-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
 .api-search {
     display: flex;
     gap: 0.5rem;
@@ -95,6 +103,17 @@
     transform: scale(1.05);
 }
 
+.search-button.secondary {
+    background-color: var(--bg-medium);
+    color: var(--text-light);
+    border: 2px solid var(--accent-green);
+}
+
+.search-button.secondary:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-darker);
+}
+
 #api-loading {
     text-align: center;
     padding: 2rem;
@@ -109,39 +128,49 @@
 
 .api-results {
     margin-top: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.monster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .monster-card {
     background-color: var(--bg-medium);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     border: 2px solid var(--accent-green);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.monster-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .monster-card h3 {
     color: var(--accent-green);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-family: 'Cinzel Decorative', serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: center;
     border-bottom: 2px solid var(--accent-green);
     padding-bottom: 0.5rem;
 }
 
 .monster-card p {
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
     color: var(--text-light);
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .monster-card strong {
     color: var(--accent-green);
-    min-width: 140px;
     display: inline-block;
 }
 
@@ -179,6 +208,11 @@
         padding: 20px;
     }
 
+    .api-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .api-search {
         flex-direction: column;
     }
@@ -187,17 +221,19 @@
         width: 100%;
     }
 
+    .monster-grid {
+        grid-template-columns: 1fr;
+    }
+
     .monster-card h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .monster-card p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
-    .monster-card strong {
-        min-width: auto;
-        display: block;
-        margin-bottom: 0.25rem;
+    .monster-card {
+        padding: 1rem;
     }
 }
