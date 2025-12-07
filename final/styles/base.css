@@ -701,3 +701,133 @@ button:focus {
     }
 }
 
+/* Thank You Page Styles */
+.thankyou-main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.thankyou-container {
+    background-color: var(--bg-darker);
+    border: 3px solid var(--accent-green);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.thankyou-container h2 {
+    color: var(--accent-green);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.thankyou-message {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.character-summary {
+    background-color: var(--bg-medium);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.char-detail h3 {
+    color: var(--accent-green);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.char-detail p {
+    color: var(--text-light);
+    margin: 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.char-detail strong {
+    color: var(--accent-green);
+}
+
+.thankyou-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.action-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.action-btn.primary {
+    background-color: var(--accent-green);
+    color: var(--bg-darker);
+}
+
+.action-btn.primary:hover {
+    background-color: var(--accent-green-hover);
+    transform: scale(1.05);
+}
+
+.action-btn.secondary {
+    background-color: var(--bg-medium);
+    color: var(--text-light);
+    border: 2px solid var(--accent-green);
+}
+
+.action-btn.secondary:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-darker);
+}
+
+.action-btn:not(.primary):not(.secondary) {
+    background-color: var(--bg-medium);
+    color: var(--text-light);
+    border: 2px solid var(--border-light);
+}
+
+.action-btn:not(.primary):not(.secondary):hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+@media (max-width: 768px) {
+    .thankyou-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .thankyou-container h2 {
+        font-size: 2rem;
+    }
+    
+    .thankyou-actions {
+        flex-direction: column;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+}
+

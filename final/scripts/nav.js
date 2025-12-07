@@ -1,8 +1,11 @@
 // Hamburger menu functionality
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+export function initNavigation() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-if (hamburger && navMenu) {
+    if (!hamburger || !navMenu) return;
+    
+    // Event handlers
     hamburger.addEventListener('click', () => {
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
         
@@ -32,3 +35,8 @@ if (hamburger && navMenu) {
         }
     });
 }
+
+// Auto-initialize
+initNavigation();
+// Auto-initialize
+initNavigation();

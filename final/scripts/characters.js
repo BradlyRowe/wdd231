@@ -90,5 +90,52 @@ function init() {
     initAutoSave();
 }
 
+// Modal functionality
+function initModal() {
+    const modal = document.getElementById('character-modal');
+    const showModalBtn = document.getElementById('show-modal-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalOkBtn = document.getElementById('modal-ok-btn');
+    
+    if (showModalBtn && modal) {
+        showModalBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+        });
+    }
+    
+    const closeModal = () => {
+        if (modal) {
+            modal.classList.add('hidden');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+    };
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+    
+    if (modalOkBtn) {
+        modalOkBtn.addEventListener('click', closeModal);
+    }
+    
+    // Close modal when clicking outside content
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+}
+
 // Initialize on page load
 init();
+initModal();

@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="styles/characters.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     
-    <script src="scripts/characters.js" defer></script>
-    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/characters.js" type="module"></script>
+    <script src="scripts/nav.js" type="module"></script>
 </head>
 <body>
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
@@ -54,36 +54,42 @@
         <div class="character-management">
         <div class="character-form-card">
             <h2>Character 1</h2>
+            <form id="char1-form" action="thankyou.html" method="get">
             <div class="form-group">
                 <label for="char1-name">Character Name:</label>
-                <input type="text" id="char1-name" placeholder="Enter character name" aria-label="Character 1 name" required>
+                <input type="text" id="char1-name" name="charname" placeholder="Enter character name" aria-label="Character 1 name" required>
                 <span class="error-message" id="char1-name-error"></span>
             </div>
             <div class="form-group">
                 <label for="char1-class">Class:</label>
-                <input type="text" id="char1-class" placeholder="Enter class" aria-label="Character 1 class" required>
+                <input type="text" id="char1-class" name="charclass" placeholder="Enter class" aria-label="Character 1 class" required>
                 <span class="error-message" id="char1-class-error"></span>
             </div>
             <div class="form-group">
                 <label for="char1-level">Level:</label>
-                <input type="number" id="char1-level" placeholder="1" min="1" max="20" aria-label="Character 1 level" required>
+                <input type="number" id="char1-level" name="charlevel" placeholder="1" min="1" max="20" aria-label="Character 1 level" required>
                 <span class="error-message" id="char1-level-error"></span>
             </div>
             <div class="form-group hp-group">
                 <label for="char1-hp">Hit Points:</label>
-                <input type="number" id="char1-hp" placeholder="Current HP" min="0" aria-label="Character 1 current HP" required>
+                <input type="number" id="char1-hp" name="charhp" placeholder="Current HP" min="0" aria-label="Character 1 current HP" required>
                 <span>/</span>
-                <input type="number" id="char1-maxhp" placeholder="Max HP" min="1" aria-label="Character 1 max HP" required>
+                <input type="number" id="char1-maxhp" name="charmaxhp" placeholder="Max HP" min="1" aria-label="Character 1 max HP" required>
                 <span class="error-message" id="char1-hp-error"></span>
             </div>
             <div class="form-group">
                 <label>Armor Class:</label>
-                <input type="number" id="char1-armor" placeholder="AC" min="1">
+                <input type="number" id="char1-armor" name="chararmor" placeholder="AC" min="1">
             </div>
             <div class="form-group">
                 <label>Notes:</label>
-                <textarea id="char1-notes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
+                <textarea id="char1-notes" name="charnotes" placeholder="Character notes, abilities, equipment, etc." rows="4"></textarea>
             </div>
+            <div class="form-actions">
+                <button type="submit" class="submit-button">Save & Submit</button>
+                <button type="button" class="info-button" id="show-modal-btn">ℹ️ Character Tips</button>
+            </div>
+            </form>
         </div>
 
         <div class="character-form-card">
@@ -188,6 +194,27 @@
             </div>
         </div>
         </div>
+
+        <!-- Modal Dialog -->
+        <div id="character-modal" class="modal hidden" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <div class="modal-content">
+                <button class="modal-close" id="close-modal-btn" aria-label="Close modal">&times;</button>
+                <h3 id="modal-title">Character Creation Tips</h3>
+                <div class="modal-body">
+                    <h4>Creating Your Four Against Darkness Character</h4>
+                    <ul>
+                        <li><strong>Name:</strong> Choose a memorable name that fits the fantasy setting</li>
+                        <li><strong>Class:</strong> Select from Warrior, Wizard, Cleric, or Rogue</li>
+                        <li><strong>Level:</strong> Start at level 1 (range: 1-20)</li>
+                        <li><strong>Hit Points:</strong> Start with max HP based on your class</li>
+                        <li><strong>Armor Class:</strong> Higher is better for defense</li>
+                        <li><strong>Notes:</strong> Track equipment, abilities, and special traits</li>
+                    </ul>
+                    <p class="modal-tip">💡 <strong>Tip:</strong> Your character data is automatically saved to your browser's local storage!</p>
+                </div>
+                <button class="modal-action-btn" id="modal-ok-btn">Got It!</button>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -198,6 +225,6 @@
         </div>
     </footer>
     
-    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/footer.js" type="module"></script>
 </body>
 </html>

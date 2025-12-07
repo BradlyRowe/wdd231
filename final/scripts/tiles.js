@@ -1,5 +1,5 @@
 // Dungeon tile definitions
-const tiles = [
+export const tiles = [
     {
         id: 'eraser',
         name: 'Eraser',

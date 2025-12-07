@@ -1,3 +1,5 @@
+import { tiles } from './tiles.js';
+
 const GRID_WIDTH = 30;
 const GRID_HEIGHT = 20;
 let selectedTile = null;
