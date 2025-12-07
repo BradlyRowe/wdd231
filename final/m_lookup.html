@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D&D 5e Monster Lookup for Four Against Darkness - Search for monster stats and information from the D&D 5e API.">
+    <meta name="author" content="Brad Rowe">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Monster Lookup - 4AD Companion">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bradlyrowe.github.io/wdd231/final/images/4ad_default.jpg">
+    <meta property="og:url" content="https://bradlyrowe.github.io/wdd231/final/m_lookup.html">
+    <meta property="og:description" content="Search for monster stats and information from the D&D 5e API.">
+    
+    <title>Monster Lookup - 4AD Companion</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Roboto+Serif:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/m_lookup.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <script src="scripts/m_lookup.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="4ad-map-grid.html">Map Grid</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="m_lookup.html" class="active">Monster Lookup</a></li>
+        </ul>
+    </nav>
+    <header class="visually-hidden">
+        <h1>D&D 5e Monster Lookup - 4AD Companion</h1>
+    </header>
+    
+    <main>
+        <div class="page-header">
+            <h2>D&D 5e Monster Lookup</h2>
+            <a href="4ad-map-grid.html" class="nav-link">Back to Grid</a>
+        </div>
+
+        <section class="api-lookup" id="api-lookup">
+            <p class="api-description">Search for D&D 5th Edition monsters to reference during your Four Against Darkness adventures.</p>
+            
+            <div class="api-search">
+                <input 
+                    type="text" 
+                    id="monster-search" 
+                    placeholder="Enter monster name (e.g., goblin, orc, troll)"
+                    aria-label="Monster search input"
+                >
+                <button id="search-btn" class="search-button">Search</button>
+            </div>
+            
+            <div id="api-loading" class="loading-indicator hidden">
+                <p>Loading monster data...</p>
+            </div>
+            
+            <div id="api-results" class="api-results"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> Four Against Darkness Companion | Brad Rowe</p>
+        <p class="footer-note">A digital tool for enhancing your 4AD tabletop experience</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

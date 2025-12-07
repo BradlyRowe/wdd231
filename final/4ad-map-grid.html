@@ -39,6 +39,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="4ad-map-grid.html" class="active">Map Grid</a></li>
             <li><a href="characters.html">Characters</a></li>
+            <li><a href="m_lookup.html">Monster Lookup</a></li>
         </ul>
     </nav>
     
@@ -50,20 +51,10 @@
         <div class="tile-library">
             <div class="tile-library-header">
                 <h2>Dungeon Tiles (Click to select)</h2>
-                <button class="nav-link" id="toggle-api-btn" aria-label="Toggle reference lookup">📚 References</button>
             </div>
             <div class="tile-options" id="tile-options">
                 <!-- Tiles will be loaded dynamically from tiles.js -->
                 <button class="clear" id="clear-grid-btn">Clear All Grid</button>
-            </div>
-            <div id="api-lookup" class="api-lookup hidden">
-                <h3>D&D 5e Reference Lookup</h3>
-                <div class="api-controls">
-                    <input type="text" id="lookup-search" placeholder="Search monsters or spells..." list="reference-list" aria-label="Search for monsters or spells">
-                    <datalist id="reference-list"></datalist>
-                    <button id="lookup-btn" class="api-button">Search</button>
-                </div>
-                <div id="api-results" class="api-results"></div>
             </div>
         </div>
 

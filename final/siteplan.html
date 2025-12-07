@@ -14,14 +14,39 @@
   <meta property="og:description" content="Site plan for Four Against Darkness Web Companion.">
   
   <title>Four Against Darkness Web Companion - Site Plan</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Roboto+Serif:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/nav.js" defer></script>
+  
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
     h1, h2 { color: #2C2C2C; }
     .color-sample { display:inline-block; width:100px; height:40px; margin:5px; border:1px solid #000; }
   </style>
 </head>
 <body>
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="4ad-map-grid.html">Map Grid</a></li>
+      <li><a href="characters.html">Characters</a></li>
+      <li><a href="m_lookup.html">Monster Lookup</a></li>
+      <li><a href="siteplan.html" class="active">Site Plan</a></li>
+    </ul>
+  </nav>
 
+  <main>
   <h1>Four Against Darkness Web Companion</h1>
 
   <h2>Site Name</h2>
@@ -53,6 +78,7 @@
   <p><strong>Gameplay Page (gameplay.html)</strong>: Dice roller at top, party stats sidebar, dungeon map canvas in main area.</p>
   <p><strong>Notes & Statistics Page (notes.html)</strong>: Notes editor on left, dynamic stats summary on right.</p>
   <p>(Wireframe sketches would be inserted here as images or diagrams.)</p>
+  </main>
 
 </body>
 </html>
