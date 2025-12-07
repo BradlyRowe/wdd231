@@ -136,6 +136,48 @@ function initModal() {
     });
 }
 
+// Save all 4 characters and redirect to thank you page
+function saveAllCharacters() {
+    const params = new URLSearchParams();
+    
+    // Gather data from all 4 characters
+    for (let i = 1; i <= 4; i++) {
+        const name = document.getElementById(`char${i}-name`)?.value || '';
+        const charClass = document.getElementById(`char${i}-class`)?.value || '';
+        const level = document.getElementById(`char${i}-level`)?.value || '';
+        const hp = document.getElementById(`char${i}-hp`)?.value || '';
+        const maxhp = document.getElementById(`char${i}-maxhp`)?.value || '';
+        const armor = document.getElementById(`char${i}-armor`)?.value || '';
+        const notes = document.getElementById(`char${i}-notes`)?.value || '';
+        
+        // Save to localStorage
+        saveCharacter(i);
+        
+        // Add to URL parameters (only if at least name or class is filled)
+        if (name || charClass) {
+            params.append(`char${i}name`, name);
+            params.append(`char${i}class`, charClass);
+            params.append(`char${i}level`, level);
+            params.append(`char${i}hp`, hp);
+            params.append(`char${i}maxhp`, maxhp);
+            params.append(`char${i}armor`, armor);
+            params.append(`char${i}notes`, notes);
+        }
+    }
+    
+    // Redirect to thank you page with all character data
+    window.location.href = `thankyou.html?${params.toString()}`;
+}
+
+// Initialize button event listener
+function initSaveAllButton() {
+    const saveAllBtn = document.getElementById('save-all-btn');
+    if (saveAllBtn) {
+        saveAllBtn.addEventListener('click', saveAllCharacters);
+    }
+}
+
 // Initialize on page load
 init();
 initModal();
+initSaveAllButton();

@@ -256,6 +256,18 @@
     flex-wrap: wrap;
 }
 
+.form-actions-global {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--bg-medium);
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
 .submit-button, .info-button {
     padding: 12px 24px;
     border: none;
